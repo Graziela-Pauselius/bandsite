@@ -1,0 +1,78 @@
+@use "./colors" as *;
+@use "./mixins" as *;
+@use "./fonts" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Header */
+
+.header {
+  background-color: $main-brand;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    padding-top: 1.3rem;
+  }
+}
+
+.nav {
+  display: flex;
+
+  &__link {
+    color: $silver;
+    padding: 5% 16%;
+
+    &--active {
+      color: $white;
+      border-bottom: 3px solid $white;
+    }
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: $main-brand;
+  color: $white;
+  padding: 3% 5%;
+
+  &__title {
+    @include text-style(1.5rem, 2rem, avenirBold);
+  }
+
+  &__icon {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__info-container {
+    margin-bottom: 1.3rem;
+  }
+
+  &__text {
+    margin: 0;
+    @include text-style(0.8rem, 1.1rem, avenirRegular);
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__logo {
+    margin-top: 3rem;
+  }
+}

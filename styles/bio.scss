@@ -1,0 +1,61 @@
+@use "./partials/global" as *;
+@use "./partials/colors" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+
+/* Hero */
+
+.hero {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 35vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__title {
+    color: $white;
+    @include text-style(1.5rem, 2rem, avenirBold);
+  }
+}
+
+.about {
+  padding: 5%;
+
+  &__title {
+    @include text-style(1.5rem, 2rem, avenirDemi);
+  }
+
+  &__slogan,
+  &__author {
+    @include text-style(0.8rem, 1.1rem, avenirDemi);
+  }
+
+  &__img {
+    width: 100%;
+    height: 160px;
+  }
+
+  &__subtitle {
+    @include text-style(0.9rem, 1.4rem, avenirDemi);
+  }
+
+  &__text {
+    @include text-style(0.8rem, 1.1rem, avenirRegular);
+  }
+}
+
+.gallery {
+  background-color: $alabaster;
+  padding: 5% 5% 0 5%;
+
+  &__title {
+    @include text-style(1.5rem, 2rem, avenirBold);
+  }
+
+  &__img {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}

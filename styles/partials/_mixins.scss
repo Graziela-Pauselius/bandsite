@@ -1,0 +1,7 @@
+@use "../partials/fonts" as *;
+
+@mixin text-style($font-size, $line-height, $font-family) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-family;
+}
