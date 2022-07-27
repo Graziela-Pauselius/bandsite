@@ -12,19 +12,19 @@
 		),
 		url("../assets/images/hero-bio.jpg");
 	background-size: cover;
-	height: 36vh;
+	height: 40vh;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 
 	@include tablet {
-		height: 80vh;
+		height: 90vh;
 		background-position: bottom;
 	}
 
 	@include desktop {
-		background-position: unset;
-		height: 100vh;
+		background-position: top;
+		height: 140vh;
 	}
 
 	&__title {
@@ -59,6 +59,7 @@
 		@include text-style(1.5rem, 2rem, avenirDemi);
 
 		@include tablet {
+			margin-top: 3rem;
 			@include text-style(2.3rem, 2.8rem, avenirDemi);
 		}
 	}
@@ -71,10 +72,12 @@
 		@include tablet {
 			@include text-style(1.5rem, 2rem, avenirDemi);
 			margin-top: 2rem;
+			letter-spacing: -0.9px;
 		}
 
 		@include desktop {
 			width: 85%;
+			letter-spacing: normal;
 		}
 	}
 
@@ -83,7 +86,12 @@
 		@include text-style(0.9rem, 1.4rem, avenirDemi);
 
 		@include tablet {
-			@include text-style(0.9rem, 1.4rem, avenirDemi);
+			@include text-style(1rem, 1.4rem, avenirDemi);
+		}
+
+		@include desktop {
+			font-size: 1.2rem;
+			margin-top: 1rem;
 		}
 	}
 
@@ -92,11 +100,11 @@
 		height: 10rem;
 
 		@include tablet {
-			height: 55vh;
+			height: 60vh;
 		}
 
 		@include desktop {
-			height: 65vh;
+			height: 100vh;
 		}
 	}
 
@@ -122,6 +130,7 @@
 
 		@include tablet {
 			@include text-style(0.9rem, 1.4rem, avenirRegular);
+			letter-spacing: -0.3px;
 		}
 
 		@include desktop {
@@ -145,6 +154,7 @@
 
 		@include tablet {
 			@include text-style(2.3rem, 2.8rem, avenirDemi);
+			padding-top: 3rem;
 		}
 
 		@include desktop {
@@ -168,7 +178,7 @@
 
 		@include tablet {
 			width: 33%;
-			padding: 0.6rem;
+			padding: 0.8rem;
 		}
 
 		@include desktop {
