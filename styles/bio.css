@@ -45,8 +45,13 @@ body {
   justify-content: center;
   align-items: center;
 }
-.header__img {
+.header__logo {
   padding-top: 1.3rem;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    padding-top: 0;
+  }
 }
 
 .nav {
@@ -59,11 +64,12 @@ body {
 }
 .nav__link {
   color: #afafaf;
-  padding: 5% 16%;
+  padding: 3% 16%;
 }
 @media (min-width: 768px) {
   .nav__link {
-    padding: 23%;
+    margin-right: 3rem;
+    padding: 11% 0;
   }
 }
 .nav__link--active {
@@ -162,16 +168,16 @@ body {
 /* Hero */
 .hero {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
-  background-position: center;
   background-size: cover;
-  height: 32vh;
+  height: 36vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 @media (min-width: 768px) {
   .hero {
-    height: 90vh;
+    height: 80vh;
+    background-position: bottom;
   }
 }
 @media (min-width: 1280px) {
@@ -184,7 +190,7 @@ body {
   color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: avenirBold;
+  font-family: avenirDemi;
   padding: 5%;
 }
 @media (min-width: 768px) {
@@ -200,12 +206,10 @@ body {
   }
 }
 
-/* Main */
-.main {
+/* About Section */
+.about {
   padding: 0 5%;
 }
-
-/* About Section */
 @media (min-width: 1280px) {
   .about {
     padding: 0 10%;
@@ -213,7 +217,7 @@ body {
 }
 @media (min-width: 768px) {
   .about__content-box {
-    padding: 0 7%;
+    padding: 0 9%;
   }
 }
 .about__title {
@@ -229,9 +233,10 @@ body {
   }
 }
 .about__slogan {
-  margin-top: 2rem;
-  font-size: 0.8rem;
-  line-height: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: -0.2px;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
   font-family: avenirDemi;
 }
 @media (min-width: 768px) {
@@ -239,6 +244,7 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: avenirDemi;
+    margin-top: 2rem;
   }
 }
 @media (min-width: 1280px) {
@@ -247,9 +253,9 @@ body {
   }
 }
 .about__author {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  line-height: 1.1rem;
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
   font-family: avenirDemi;
 }
 @media (min-width: 768px) {
@@ -261,11 +267,11 @@ body {
 }
 .about__img {
   width: 100%;
-  height: 160px;
+  height: 10rem;
 }
 @media (min-width: 768px) {
   .about__img {
-    height: 60vh;
+    height: 55vh;
   }
 }
 @media (min-width: 1280px) {
@@ -274,6 +280,7 @@ body {
   }
 }
 .about__subtitle {
+  margin-top: 1.6rem;
   font-size: 0.9rem;
   line-height: 1.4rem;
   font-family: avenirDemi;
@@ -295,6 +302,7 @@ body {
   font-size: 0.8rem;
   line-height: 1.1rem;
   font-family: avenirRegular;
+  letter-spacing: 0.3px;
 }
 @media (min-width: 768px) {
   .about__text {
@@ -312,6 +320,7 @@ body {
 /* Photo Gallery Section */
 .gallery {
   background-color: #fafafa;
+  padding: 0 5%;
 }
 @media (min-width: 1280px) {
   .gallery {
@@ -322,7 +331,7 @@ body {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: avenirDemi;
-  padding-top: 1rem;
+  padding-top: 1.4rem;
 }
 @media (min-width: 768px) {
   .gallery__title {

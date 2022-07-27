@@ -11,15 +11,15 @@
 			rgba(50, 50, 50, 0.5)
 		),
 		url("../assets/images/hero-bio.jpg");
-	background-position: center;
 	background-size: cover;
-	height: 32vh;
+	height: 36vh;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 
 	@include tablet {
-		height: 90vh;
+		height: 80vh;
+		background-position: bottom;
 	}
 
 	@include desktop {
@@ -29,7 +29,7 @@
 
 	&__title {
 		color: $white;
-		@include text-style(1.5rem, 2rem, avenirBold);
+		@include text-style(1.5rem, 2rem, avenirDemi);
 		padding: 5%;
 
 		@include tablet {
@@ -42,20 +42,16 @@
 	}
 }
 
-/* Main */
-.main {
-	padding: 0 5%;
-}
-
 /* About Section */
 .about {
+	padding: 0 5%;
 	@include desktop {
 		padding: 0 10%;
 	}
 
 	&__content-box {
 		@include tablet {
-			padding: 0 7%;
+			padding: 0 9%;
 		}
 	}
 
@@ -68,11 +64,13 @@
 	}
 
 	&__slogan {
-		margin-top: 2rem;
-		@include text-style(0.8rem, 1.1rem, avenirDemi);
+		margin-top: 1rem;
+		letter-spacing: -0.2px;
+		@include text-style(0.9rem, 1.4rem, avenirDemi);
 
 		@include tablet {
 			@include text-style(1.5rem, 2rem, avenirDemi);
+			margin-top: 2rem;
 		}
 
 		@include desktop {
@@ -81,8 +79,8 @@
 	}
 
 	&__author {
-		margin-top: 1rem;
-		@include text-style(0.8rem, 1.1rem, avenirDemi);
+		margin-top: 0.7rem;
+		@include text-style(0.9rem, 1.4rem, avenirDemi);
 
 		@include tablet {
 			@include text-style(0.9rem, 1.4rem, avenirDemi);
@@ -91,10 +89,10 @@
 
 	&__img {
 		width: 100%;
-		height: 160px;
+		height: 10rem;
 
 		@include tablet {
-			height: 60vh;
+			height: 55vh;
 		}
 
 		@include desktop {
@@ -103,6 +101,7 @@
 	}
 
 	&__subtitle {
+		margin-top: 1.6rem;
 		@include text-style(0.9rem, 1.4rem, avenirDemi);
 
 		@include tablet {
@@ -119,6 +118,7 @@
 
 	&__text {
 		@include text-style(0.8rem, 1.1rem, avenirRegular);
+		letter-spacing: 0.3px;
 
 		@include tablet {
 			@include text-style(0.9rem, 1.4rem, avenirRegular);
@@ -133,7 +133,7 @@
 /* Photo Gallery Section */
 .gallery {
 	background-color: $alabaster;
-	//   padding: 0 5%;
+	padding: 0 5%;
 
 	@include desktop {
 		padding: 0 10%;
@@ -141,7 +141,7 @@
 
 	&__title {
 		@include text-style(1.5rem, 2rem, avenirDemi);
-		padding-top: 1rem;
+		padding-top: 1.4rem;
 
 		@include tablet {
 			@include text-style(2.3rem, 2.8rem, avenirDemi);

@@ -33,8 +33,12 @@ body {
 		align-items: center;
 	}
 
-	&__img {
+	&__logo {
 		padding-top: 1.3rem;
+
+		@include tablet {
+			padding-top: 0;
+		}
 	}
 }
 
@@ -47,10 +51,11 @@ body {
 
 	&__link {
 		color: $silver;
-		padding: 5% 16%;
+		padding: 3% 16%;
 
 		@include tablet {
-			padding: 23%; //look
+			margin-right: 3rem;
+			padding: 11% 0; //look
 		}
 
 		&--active {
