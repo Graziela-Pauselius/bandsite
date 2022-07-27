@@ -1,4 +1,17 @@
 @use "../partials/fonts" as *;
+@use "../partials/variables" as *;
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
 
 @mixin text-style($font-size, $line-height, $font-family) {
   font-size: $font-size;

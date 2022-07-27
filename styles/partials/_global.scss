@@ -5,74 +5,130 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 /* Header */
 
 .header {
-  background-color: $main-brand;
-  width: 100%;
+	background-color: $main-brand;
+	width: 100%;
 
-  &__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+	@include tablet {
+		display: flex;
+		padding: 0 5%;
+	}
 
-  &__img {
-    padding-top: 1.3rem;
-  }
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__img {
+		padding-top: 1.3rem;
+	}
 }
 
 .nav {
-  display: flex;
+	display: flex;
 
-  &__link {
-    color: $silver;
-    padding: 5% 16%;
+	@include tablet {
+		margin-left: 4rem;
+	}
 
-    &--active {
-      color: $white;
-      border-bottom: 3px solid $white;
-    }
-  }
+	&__link {
+		color: $silver;
+		padding: 5% 16%;
+
+		@include tablet {
+			padding: 23%; //look
+		}
+
+		&--active {
+			color: $white;
+			border-bottom: 3px solid $white;
+		}
+	}
 }
 
 /* Footer */
 
 .footer {
-  background-color: $main-brand;
-  color: $white;
-  padding: 3% 5%;
+	background-color: $main-brand;
+	color: $white;
+	padding: 2% 5%;
+	position: relative;
 
-  &__title {
-    @include text-style(1.5rem, 2rem, avenirBold);
-  }
+	&__header {
+		@include tablet {
+			display: flex;
+			align-items: center;
+		}
+	}
 
-  &__icon {
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-  }
+	&__title {
+		@include text-style(1.5rem, 2rem, avenirDemi);
 
-  &__info-container {
-    margin-bottom: 1.3rem;
-  }
+		@include tablet {
+			@include text-style(2.3rem, 2.8rem, avenirDemi);
+		}
+	}
 
-  &__text {
-    margin: 0;
-    @include text-style(0.8rem, 1.1rem, avenirRegular);
+	&__icons-box {
+		@include tablet {
+			margin-left: 2rem;
+		}
+	}
 
-    &--bold {
-      font-weight: 700;
-    }
-  }
+	&__icon {
+		margin-right: 1rem;
+		margin-bottom: 1rem;
 
-  &__logo {
-    margin-top: 3rem;
-  }
+		@include tablet {
+			margin-bottom: 0;
+		}
+	}
+
+	&__info {
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__info-container {
+		margin-bottom: 1.3rem;
+	}
+
+	&__text {
+		margin: 0;
+		@include text-style(0.8rem, 1.1rem, avenirRegular);
+
+		@include tablet {
+			@include text-style(0.9rem, 1.2rem, avenirRegular);
+		}
+
+		&--bold {
+			font-weight: 700;
+		}
+	}
+
+	&__logo {
+		margin-top: 3rem;
+
+		@include tablet {
+			position: absolute;
+			top: 0.6rem;
+			right: 3.9rem;
+		}
+	}
+
+	&__text--copy-right {
+		padding: 1rem 0;
+	}
 }

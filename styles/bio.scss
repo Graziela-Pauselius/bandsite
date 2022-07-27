@@ -6,56 +6,137 @@
 /* Hero */
 
 .hero {
-  background-image: url("../assets/images/hero-bio.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 35vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+	background-image: linear-gradient(
+			rgba(50, 50, 50, 0.5),
+			rgba(50, 50, 50, 0.5)
+		),
+		url("../assets/images/hero-bio.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 32vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 
-  &__title {
-    color: $white;
-    @include text-style(1.5rem, 2rem, avenirBold);
-  }
+	@include tablet {
+		height: 90vh;
+	}
+
+	&__title {
+		color: $white;
+		@include text-style(1.5rem, 2rem, avenirBold);
+		padding: 5%;
+
+		@include tablet {
+			@include text-style(3.8rem, 4.3rem, avenirDemi);
+		}
+	}
 }
 
+/* Main */
+.main {
+	padding: 0 5%;
+}
+
+/* About Section */
 .about {
-  padding: 5%;
+	&__content-box {
+		@include tablet {
+			padding: 0 7%;
+		}
+	}
 
-  &__title {
-    @include text-style(1.5rem, 2rem, avenirDemi);
-  }
+	&__title {
+		@include text-style(1.5rem, 2rem, avenirDemi);
 
-  &__slogan,
-  &__author {
-    @include text-style(0.8rem, 1.1rem, avenirDemi);
-  }
+		@include tablet {
+			@include text-style(2.3rem, 2.8rem, avenirDemi);
+		}
+	}
 
-  &__img {
-    width: 100%;
-    height: 160px;
-  }
+	&__slogan {
+		margin-top: 2rem;
+		@include text-style(0.8rem, 1.1rem, avenirDemi);
 
-  &__subtitle {
-    @include text-style(0.9rem, 1.4rem, avenirDemi);
-  }
+		@include tablet {
+			@include text-style(1.5rem, 2rem, avenirDemi);
+		}
+	}
 
-  &__text {
-    @include text-style(0.8rem, 1.1rem, avenirRegular);
-  }
+	&__author {
+		margin-top: 1rem;
+		@include text-style(0.8rem, 1.1rem, avenirDemi);
+
+		@include tablet {
+			@include text-style(0.9rem, 1.4rem, avenirDemi);
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 160px;
+
+		@include tablet {
+			height: 60vh;
+		}
+	}
+
+	&__subtitle {
+		@include text-style(0.9rem, 1.4rem, avenirDemi);
+
+		@include tablet {
+			@include text-style(1.5rem, 2rem, avenirDemi);
+		}
+	}
+
+	&__info-box {
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__text {
+		@include text-style(0.8rem, 1.1rem, avenirRegular);
+
+		@include tablet {
+			@include text-style(0.9rem, 1.4rem, avenirRegular);
+		}
+	}
 }
 
+/* Photo Gallery Section */
 .gallery {
-  background-color: $alabaster;
-  padding: 5% 5% 0 5%;
+	background-color: $alabaster;
+	//   padding: 0 5%;
 
-  &__title {
-    @include text-style(1.5rem, 2rem, avenirBold);
-  }
+	&__title {
+		@include text-style(1.5rem, 2rem, avenirDemi);
+		padding-top: 1rem;
 
-  &__img {
-    width: 100%;
-    padding-bottom: 1rem;
-  }
+		@include tablet {
+			@include text-style(2.3rem, 2.8rem, avenirDemi);
+		}
+	}
+
+	&__container {
+		@include tablet {
+			display: flex;
+			flex-wrap: wrap;
+
+			@include tablet {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	&__img {
+		width: 100%;
+		padding-bottom: 1rem;
+
+		@include tablet {
+			width: 33%;
+			padding: 0.6rem;
+		}
+	}
 }
