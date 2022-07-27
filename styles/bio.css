@@ -35,6 +35,11 @@ body {
     padding: 0 5%;
   }
 }
+@media (min-width: 1280px) {
+  .header {
+    padding: 0 10%;
+  }
+}
 .header__container {
   display: flex;
   justify-content: center;
@@ -73,6 +78,11 @@ body {
   padding: 2% 5%;
   position: relative;
 }
+@media (min-width: 1280px) {
+  .footer {
+    padding: 0 10%;
+  }
+}
 @media (min-width: 768px) {
   .footer__header {
     display: flex;
@@ -109,6 +119,11 @@ body {
   .footer__info {
     display: flex;
     justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__info {
+    width: 70%;
   }
 }
 .footer__info-container {
@@ -159,6 +174,12 @@ body {
     height: 90vh;
   }
 }
+@media (min-width: 1280px) {
+  .hero {
+    background-position: unset;
+    height: 100vh;
+  }
+}
 .hero__title {
   color: #ffffff;
   font-size: 1.5rem;
@@ -173,6 +194,11 @@ body {
     font-family: avenirDemi;
   }
 }
+@media (min-width: 1280px) {
+  .hero__title {
+    padding-left: 10%;
+  }
+}
 
 /* Main */
 .main {
@@ -180,6 +206,11 @@ body {
 }
 
 /* About Section */
+@media (min-width: 1280px) {
+  .about {
+    padding: 0 10%;
+  }
+}
 @media (min-width: 768px) {
   .about__content-box {
     padding: 0 7%;
@@ -210,6 +241,11 @@ body {
     font-family: avenirDemi;
   }
 }
+@media (min-width: 1280px) {
+  .about__slogan {
+    width: 85%;
+  }
+}
 .about__author {
   margin-top: 1rem;
   font-size: 0.8rem;
@@ -230,6 +266,11 @@ body {
 @media (min-width: 768px) {
   .about__img {
     height: 60vh;
+  }
+}
+@media (min-width: 1280px) {
+  .about__img {
+    height: 65vh;
   }
 }
 .about__subtitle {
@@ -262,10 +303,20 @@ body {
     font-family: avenirRegular;
   }
 }
+@media (min-width: 1280px) {
+  .about__text {
+    width: 49%;
+  }
+}
 
 /* Photo Gallery Section */
 .gallery {
   background-color: #fafafa;
+}
+@media (min-width: 1280px) {
+  .gallery {
+    padding: 0 10%;
+  }
 }
 .gallery__title {
   font-size: 1.5rem;
@@ -299,5 +350,10 @@ body {
   .gallery__img {
     width: 33%;
     padding: 0.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .gallery__img {
+    padding: 0 1.2rem 1.2rem 0;
   }
 }/*# sourceMappingURL=bio.css.map */

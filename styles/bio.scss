@@ -22,6 +22,11 @@
 		height: 90vh;
 	}
 
+	@include desktop {
+		background-position: unset;
+		height: 100vh;
+	}
+
 	&__title {
 		color: $white;
 		@include text-style(1.5rem, 2rem, avenirBold);
@@ -29,6 +34,10 @@
 
 		@include tablet {
 			@include text-style(3.8rem, 4.3rem, avenirDemi);
+		}
+
+		@include desktop {
+			padding-left: 10%;
 		}
 	}
 }
@@ -40,6 +49,10 @@
 
 /* About Section */
 .about {
+	@include desktop {
+		padding: 0 10%;
+	}
+
 	&__content-box {
 		@include tablet {
 			padding: 0 7%;
@@ -61,6 +74,10 @@
 		@include tablet {
 			@include text-style(1.5rem, 2rem, avenirDemi);
 		}
+
+		@include desktop {
+			width: 85%;
+		}
 	}
 
 	&__author {
@@ -78,6 +95,10 @@
 
 		@include tablet {
 			height: 60vh;
+		}
+
+		@include desktop {
+			height: 65vh;
 		}
 	}
 
@@ -102,6 +123,10 @@
 		@include tablet {
 			@include text-style(0.9rem, 1.4rem, avenirRegular);
 		}
+
+		@include desktop {
+			width: 49%;
+		}
 	}
 }
 
@@ -110,12 +135,19 @@
 	background-color: $alabaster;
 	//   padding: 0 5%;
 
+	@include desktop {
+		padding: 0 10%;
+	}
+
 	&__title {
 		@include text-style(1.5rem, 2rem, avenirDemi);
 		padding-top: 1rem;
 
 		@include tablet {
 			@include text-style(2.3rem, 2.8rem, avenirDemi);
+		}
+
+		@include desktop {
 		}
 	}
 
@@ -137,6 +169,10 @@
 		@include tablet {
 			width: 33%;
 			padding: 0.6rem;
+		}
+
+		@include desktop {
+			padding: 0 1.2rem 1.2rem 0;
 		}
 	}
 }

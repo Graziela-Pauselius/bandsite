@@ -23,6 +23,10 @@ body {
 		padding: 0 5%;
 	}
 
+	@include desktop {
+		padding: 0 10%;
+	}
+
 	&__container {
 		display: flex;
 		justify-content: center;
@@ -64,6 +68,10 @@ body {
 	padding: 2% 5%;
 	position: relative;
 
+	@include desktop {
+		padding: 0 10%;
+	}
+
 	&__header {
 		@include tablet {
 			display: flex;
@@ -98,6 +106,10 @@ body {
 		@include tablet {
 			display: flex;
 			justify-content: space-between;
+		}
+
+		@include desktop {
+			width: 70%;
 		}
 	}
 
