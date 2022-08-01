@@ -14,7 +14,6 @@
 	background-size: cover;
 	height: 40vh;
 	display: flex;
-	justify-content: flex-start;
 	align-items: center;
 
 	@include tablet {
@@ -66,7 +65,6 @@
 
 	&__slogan {
 		margin-top: 1rem;
-		letter-spacing: -0.2px;
 		@include text-style(0.9rem, 1.4rem, avenirDemi);
 
 		@include tablet {

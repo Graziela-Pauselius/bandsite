@@ -180,7 +180,6 @@ body {
   background-size: cover;
   height: 40vh;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 @media (min-width: 768px) {
@@ -244,7 +243,6 @@ body {
 }
 .about__slogan {
   margin-top: 1rem;
-  letter-spacing: -0.2px;
   font-size: 0.9rem;
   line-height: 1.4rem;
   font-family: avenirDemi;
