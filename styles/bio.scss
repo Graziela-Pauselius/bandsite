@@ -88,7 +88,7 @@
 		}
 
 		@include desktop {
-			font-size: 1.2rem;
+			font-size: 1rem;
 			margin-top: 1rem;
 		}
 	}
@@ -102,7 +102,7 @@
 		}
 
 		@include desktop {
-			height: 100vh;
+			height: 90vh;
 		}
 	}
 
@@ -112,6 +112,11 @@
 
 		@include tablet {
 			@include text-style(1.5rem, 2rem, avenirDemi);
+		}
+
+		@include desktop {
+			margin-bottom: 0.4rem;
+			margin-top: 3.2rem;
 		}
 	}
 
