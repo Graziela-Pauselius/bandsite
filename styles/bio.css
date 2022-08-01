@@ -76,6 +76,11 @@ body {
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
 }
+.nav__link:hover {
+  cursor: pointer;
+  color: #db7093;
+  border-bottom: 3px solid #db7093;
+}
 
 /* Footer */
 .footer {
@@ -384,6 +389,11 @@ body {
 .gallery__img {
   width: 100%;
   padding-bottom: 1rem;
+}
+.gallery__img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 1s ease;
 }
 @media (min-width: 768px) {
   .gallery__img {

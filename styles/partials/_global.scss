@@ -62,6 +62,13 @@ body {
 			color: $white;
 			border-bottom: 3px solid $white;
 		}
+
+		&:hover {
+			cursor: pointer;
+
+			color: $palevioletred;
+			border-bottom: 3px solid $palevioletred;
+		}
 	}
 }
 
