@@ -195,3 +195,74 @@
 		}
 	}
 }
+
+/* Comments */
+
+.comments {
+	padding: 0 5%;
+
+	&__form-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		width: 82%;
+	}
+
+	&__form-avatar {
+		background-image: url("../assets/images/Mohan-muruge.jpg");
+	}
+
+	&__form-label {
+		color: $silver;
+		@include text-style(0.6rem, 1.3rem, avenirDemi);
+		padding: 0.3rem;
+	}
+
+	&__form-field {
+		height: 2.3rem;
+		width: 100%;
+		border-radius: 0.3rem;
+		padding: 0.8rem;
+		border: 1px solid $mercury;
+		background-color: $alabaster;
+	}
+
+	&__form-textarea {
+		height: 8rem;
+	}
+}
+
+.comment {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid $mercury;
+		padding-top: 1rem;
+	}
+
+	&__container-info {
+		width: 82%;
+	}
+
+	&__avatar {
+		background-color: $mercury;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__date {
+		color: $silver;
+	}
+
+	&__name {
+		margin: 0;
+	}
+}

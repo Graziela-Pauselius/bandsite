@@ -65,6 +65,7 @@ body {
 .nav__link {
   color: #afafaf;
   padding: 3% 16%;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .nav__link {
@@ -183,6 +184,27 @@ body {
 }
 .footer__text--copy-right {
   padding: 1rem 0;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  background-color: #323232;
+  color: #ffffff;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-family: avenirDemi;
+}
+
+.avatar {
+  height: 2.3rem;
+  width: 2.3rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
 }
 
 /* Hero */
@@ -405,4 +427,63 @@ body {
   .gallery__img {
     padding: 0 1.2rem 1.2rem 0;
   }
+}
+
+/* Comments */
+.comments {
+  padding: 0 5%;
+}
+.comments__form-container {
+  display: flex;
+  justify-content: space-between;
+}
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+}
+.comments__form-avatar {
+  background-image: url("../assets/images/Mohan-muruge.jpg");
+}
+.comments__form-label {
+  color: #afafaf;
+  font-size: 0.6rem;
+  line-height: 1.3rem;
+  font-family: avenirDemi;
+  padding: 0.3rem;
+}
+.comments__form-field {
+  height: 2.3rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+}
+.comments__form-textarea {
+  height: 8rem;
+}
+
+.comment__container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: 1rem;
+}
+.comment__container-info {
+  width: 82%;
+}
+.comment__avatar {
+  background-color: #e1e1e1;
+}
+.comment__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment__date {
+  color: #afafaf;
+}
+.comment__name {
+  margin: 0;
 }/*# sourceMappingURL=bio.css.map */

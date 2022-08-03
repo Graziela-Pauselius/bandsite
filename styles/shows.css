@@ -65,6 +65,7 @@ body {
 .nav__link {
   color: #afafaf;
   padding: 3% 16%;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .nav__link {
@@ -183,4 +184,25 @@ body {
 }
 .footer__text--copy-right {
   padding: 1rem 0;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  background-color: #323232;
+  color: #ffffff;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-family: avenirDemi;
+}
+
+.avatar {
+  height: 2.3rem;
+  width: 2.3rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
 }/*# sourceMappingURL=shows.css.map */

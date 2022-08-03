@@ -52,6 +52,7 @@ body {
 	&__link {
 		color: $silver;
 		padding: 3% 16%;
+		text-decoration: none;
 
 		@include tablet {
 			margin-right: 3rem;
@@ -166,4 +167,25 @@ body {
 	&__text--copy-right {
 		padding: 1rem 0;
 	}
+}
+
+/* Button */
+
+.btn {
+	width: 100%;
+	background-color: $main-brand;
+	color: $white;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+	margin: 1rem 0;
+
+	@include text-style(1rem, 1.3rem, avenirDemi);
+}
+
+.avatar {
+	height: 2.3rem;
+	width: 2.3rem;
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
 }

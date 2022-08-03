@@ -39,29 +39,29 @@ commentSection.appendChild(title);
 
 // form container
 const formContainer = document.createElement("div");
-formContainer.classList.add("form__container");
+formContainer.classList.add("comments__form-container");
 commentSection.appendChild(formContainer);
 
 // form avatar
 const formAvatar = document.createElement("img");
-formAvatar.classList.add("form__avatar", "avatar");
+formAvatar.classList.add("comments__form-avatar", "avatar");
 formContainer.appendChild(formAvatar);
 
 // form
 const form = document.createElement("form");
-form.classList.add("form");
+form.classList.add("comments__form");
 formContainer.appendChild(form);
 
 // form name label
 const nameLabel = document.createElement("label");
-nameLabel.classList.add("form__label");
+nameLabel.classList.add("comments__form-label");
 nameLabel.setAttribute("for", "name");
 nameLabel.innerText = "NAME";
 form.appendChild(nameLabel);
 
 // form name field
 const nameField = document.createElement("input");
-nameField.classList.add("form__field");
+nameField.classList.add("comments__form-field");
 nameField.setAttribute("type", "text");
 nameField.setAttribute("id", "name");
 nameField.setAttribute("name", "name");
@@ -70,16 +70,16 @@ form.appendChild(nameField);
 
 // form comment label
 const commentLabel = document.createElement("label");
-commentLabel.classList.add("form__label");
+commentLabel.classList.add("comments__form-label");
 commentLabel.setAttribute("for", "comment");
 commentLabel.innerText = "COMMENT";
 form.appendChild(commentLabel);
 
 // form comment field
 const commentField = document.createElement("textarea");
-commentField.classList.add("form__field");
+commentField.classList.add("comments__form-textarea", "comments__form-field");
 commentField.setAttribute("rows", "10");
-commentField.setAttribute("cols", "40");
+commentField.setAttribute("cols", "30");
 commentField.setAttribute("id", "comment");
 commentField.setAttribute("name", "comment");
 commentField.innerText = "Add a new comment";
@@ -87,7 +87,7 @@ form.appendChild(commentField);
 
 // form button
 const btn = document.createElement("button");
-btn.classList.add("form__btn");
+btn.classList.add("comments__form-btn", "btn");
 btn.innerText = "COMMENT";
 form.appendChild(btn);
 
@@ -105,23 +105,33 @@ const displayComment = (obj) => {
 		commentAvatar.classList.add("comment__avatar", "avatar");
 		commentContainer.appendChild(commentAvatar);
 
+		//comment content container
+		const commentInfoContainer = document.createElement("div");
+		commentInfoContainer.classList.add("comment__container-info");
+		commentContainer.appendChild(commentInfoContainer);
+
+		// name and date container
+		const commentBox = document.createElement("div");
+		commentBox.classList.add("comment__box");
+		commentInfoContainer.appendChild(commentBox);
+
 		// comment name
-		const name = document.createElement("h3");
+		const name = document.createElement("h4");
 		name.classList.add("comment__name");
 		name.innerText = obj[i].name;
-		commentContainer.appendChild(name);
+		commentBox.appendChild(name);
 
 		// comment date
 		const date = document.createElement("span");
 		date.classList.add("comment__date");
 		date.innerText = obj[i].date;
-		commentContainer.appendChild(date);
+		commentBox.appendChild(date);
 
 		// comment content
 		const content = document.createElement("p");
 		content.classList.add("comment__content");
 		content.innerText = obj[i].content;
-		commentContainer.appendChild(content);
+		commentInfoContainer.appendChild(content);
 	}
 };
 
