@@ -24,23 +24,23 @@ const comments = [
 ];
 
 // ------- Create Comment Section -----
-const commentSection = document.createElement("section");
-commentSection.classList.add("comments");
-commentSection;
-document.body.appendChild(commentSection);
+const commentsSection = document.createElement("section");
+commentsSection.classList.add("comments");
+commentsSection;
+document.body.appendChild(commentsSection);
 
 // comment section title
 const title = document.createElement("h2");
 title.classList.add("comments__title");
 title.innerText = "Join the Conversation";
-commentSection.appendChild(title);
+commentsSection.appendChild(title);
 
 // ------ Comment Form --------
 
 // form container
 const formContainer = document.createElement("div");
 formContainer.classList.add("comments__form-container");
-commentSection.appendChild(formContainer);
+commentsSection.appendChild(formContainer);
 
 // form avatar
 const formAvatar = document.createElement("img");
@@ -91,14 +91,20 @@ btn.classList.add("comments__form-btn", "btn");
 btn.innerText = "COMMENT";
 form.appendChild(btn);
 
+//comments container
+const commentsContainer = document.createElement("div");
+commentsContainer.classList.add("comments__container");
+commentsSection.appendChild(commentsContainer);
+
 // ------- Display Comments Function ----
 const displayComment = (obj) => {
+	commentsContainer.innerHTML = null;
 	// Loop to create each comment section
-	for (let i = 0; i < obj.length; i++) {
+	for (let i = 0; i < comments.length; i++) {
 		//  comment container
 		const commentContainer = document.createElement("div");
 		commentContainer.classList.add("comment__container");
-		commentSection.appendChild(commentContainer);
+		commentsContainer.appendChild(commentContainer);
 
 		// comment avatar
 		const commentAvatar = document.createElement("img");
@@ -118,44 +124,61 @@ const displayComment = (obj) => {
 		// comment name
 		const name = document.createElement("h4");
 		name.classList.add("comment__name", "subheader");
-		name.innerText = obj[i].name;
+		name.innerText = comments[i].name;
 		commentBox.appendChild(name);
 
 		// comment date
 		const date = document.createElement("span");
 		date.classList.add("comment__date");
-		date.innerText = obj[i].date;
+		date.innerText = comments[i].date;
 		commentBox.appendChild(date);
 
 		// comment content
 		const content = document.createElement("p");
 		content.classList.add("comment__content");
-		content.innerText = obj[i].content;
+		content.innerText = comments[i].content;
 		commentInfoContainer.appendChild(content);
 	}
 };
 
-// displayComment(comments);
+displayComment(comments);
 
-// // Handler function
-// const commentHandler = () => {
-// 	const nameValue = e.target.nameField.value;
-// 	const commentValue = commentField.value;
+const nameValue = document.querySelector(".comments__form-field");
+const commentValue = document.querySelector(".comments__form-textarea");
 
-// 	let newComment = {
-// 		name: nameValue,
-// 		content: commentValue,
-// 	};
+//  ----- Date formatted ------
+// const today = new Date();
+// const day = today.getDate();
+// const month = today.getMonth() + 1;
+// const year = today.getFullYear();
 
-// 	const newCommentsList = comments.name;
-// 	newCommentsList.unshift(newComment);
+// if (day < 10) day = "0" + day;
+// if (month < 10) month = "0" + month;
 
-// 	form.reset();
-// };
+// const dateFormated = day + "/" + month + "/" + year;
 
-// // Event Listner
-// form.addEventListener("submit", (e) => {
-// 	e.preventDefault();
-// 	displayComment(commentHandler());
-// 	console.log(e);
-// });
+// Handler function
+const addNewComment = () => {
+	const newName = nameValue.value;
+	console.log(newName);
+	const newComment = commentValue.value;
+	console.log(newComment);
+
+	let newDisplayComment = {
+		name: newName,
+		content: newComment,
+		// date: dateFormated,
+	};
+
+	const newCommentsList = comments;
+	newCommentsList.unshift(newDisplayComment);
+
+	form.reset();
+};
+
+// Event Listner
+form.addEventListener("submit", (e) => {
+	e.preventDefault();
+	displayComment(addNewComment());
+	console.log(e);
+});
