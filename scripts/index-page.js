@@ -54,7 +54,7 @@ formContainer.appendChild(form);
 
 // form name label
 const nameLabel = document.createElement("label");
-nameLabel.classList.add("comments__form-label");
+nameLabel.classList.add("comments__form-label", "label");
 nameLabel.setAttribute("for", "name");
 nameLabel.innerText = "NAME";
 form.appendChild(nameLabel);
@@ -70,7 +70,7 @@ form.appendChild(nameField);
 
 // form comment label
 const commentLabel = document.createElement("label");
-commentLabel.classList.add("comments__form-label");
+commentLabel.classList.add("comments__form-label", "label");
 commentLabel.setAttribute("for", "comment");
 commentLabel.innerText = "COMMENT";
 form.appendChild(commentLabel);
@@ -117,7 +117,7 @@ const displayComment = (obj) => {
 
 		// comment name
 		const name = document.createElement("h4");
-		name.classList.add("comment__name");
+		name.classList.add("comment__name", "subheader");
 		name.innerText = obj[i].name;
 		commentBox.appendChild(name);
 
@@ -135,4 +135,27 @@ const displayComment = (obj) => {
 	}
 };
 
-displayComment(comments);
+// displayComment(comments);
+
+// // Handler function
+// const commentHandler = () => {
+// 	const nameValue = e.target.nameField.value;
+// 	const commentValue = commentField.value;
+
+// 	let newComment = {
+// 		name: nameValue,
+// 		content: commentValue,
+// 	};
+
+// 	const newCommentsList = comments.name;
+// 	newCommentsList.unshift(newComment);
+
+// 	form.reset();
+// };
+
+// // Event Listner
+// form.addEventListener("submit", (e) => {
+// 	e.preventDefault();
+// 	displayComment(commentHandler());
+// 	console.log(e);
+// });

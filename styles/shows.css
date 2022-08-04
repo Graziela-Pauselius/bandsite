@@ -205,4 +205,54 @@ body {
   background-position: center;
   background-size: cover;
   border-radius: 50%;
+}
+
+.subheader {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-family: avenirRegular;
+}
+.subheader--bold {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-family: avenirBold;
+}
+
+.label {
+  color: #afafaf;
+  font-size: 0.6rem;
+  line-height: 1.3rem;
+  font-family: avenirDemi;
+  padding: 0.3rem;
+  margin-bottom: 0;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-shows.jpg");
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+}
+.hero__text {
+  color: #ffffff;
+}
+.hero__title {
+  color: #ffffff;
+  width: 65%;
+}
+.hero__text {
+  color: #ffffff;
+}
+
+.show__section {
+  padding: 0 5%;
+  margin-bottom: 1rem;
+}
+.show__container {
+  border-bottom: 1px solid #e1e1e1;
 }/*# sourceMappingURL=shows.css.map */

@@ -37,6 +37,12 @@ const showSection = document.createElement("section");
 showSection.classList.add("show__section");
 main.appendChild(showSection);
 
+//Show Header
+const showHeader = document.createElement("h2");
+showHeader.classList.add("show__header");
+showHeader.innerText = "Shows";
+showSection.appendChild(showHeader);
+
 // ----- Display Shows Function ------
 const displayShows = (obj) => {
 	for (let i = 0; i < obj.length; i++) {
@@ -47,34 +53,34 @@ const displayShows = (obj) => {
 
 		//Date
 		const showDateTitle = document.createElement("p");
-		showDateTitle.classList.add("show__title", "show__title--bold");
+		showDateTitle.classList.add("show__label", "label");
 		showDateTitle.innerText = "DATE";
 		show.appendChild(showDateTitle);
 
 		const showDate = document.createElement("p");
-		showDate.classList.add("show__text");
+		showDate.classList.add("show__text", "subheader", "subheader--bold");
 		showDate.innerText = obj[i].date;
 		show.appendChild(showDate);
 
 		// Venue
 		const showVenueTitle = document.createElement("p");
-		showVenueTitle.classList.add("show__title");
+		showVenueTitle.classList.add("show__label", "label");
 		showVenueTitle.innerText = "VENUE";
 		show.appendChild(showVenueTitle);
 
 		const showVenue = document.createElement("p");
-		showVenue.classList.add("show__text");
+		showVenue.classList.add("show__text", "subheader");
 		showVenue.innerText = obj[i].venue;
 		show.appendChild(showVenue);
 
 		// Location
 		const locationTitle = document.createElement("p");
-		locationTitle.classList.add("show__title");
+		locationTitle.classList.add("show__label", "label");
 		locationTitle.innerText = "LOCATION";
 		show.appendChild(locationTitle);
 
 		const location = document.createElement("p");
-		location.classList.add("show__text");
+		location.classList.add("show__text", "subheader");
 		location.innerText = "San Francisco, CA";
 		show.appendChild(location);
 

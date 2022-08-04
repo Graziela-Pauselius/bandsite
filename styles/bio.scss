@@ -200,10 +200,16 @@
 
 .comments {
 	padding: 0 5%;
+	padding-bottom: 1rem;
+
+	&__title {
+		@include text-style(1.5rem, 2rem, avenirDemi);
+	}
 
 	&__form-container {
 		display: flex;
 		justify-content: space-between;
+		border-bottom: 1px solid $mercury;
 	}
 
 	&__form {
@@ -216,11 +222,11 @@
 		background-image: url("../assets/images/Mohan-muruge.jpg");
 	}
 
-	&__form-label {
-		color: $silver;
-		@include text-style(0.6rem, 1.3rem, avenirDemi);
-		padding: 0.3rem;
-	}
+	// &__form-label {
+	// 	color: $silver;
+	// 	@include text-style(0.6rem, 1.3rem, avenirDemi);
+	// 	padding: 0.3rem;
+	// }
 
 	&__form-field {
 		height: 2.3rem;
@@ -260,9 +266,14 @@
 
 	&__date {
 		color: $silver;
+		@include text-style(0.8rem, 1.3rem, avenirRegular);
 	}
 
-	&__name {
-		margin: 0;
+	// &__name {
+
+	// }
+
+	&__content {
+		@include text-style(0.8rem, 1.3rem, avenirRegular);
 	}
 }

@@ -189,3 +189,19 @@ body {
 	background-size: cover;
 	border-radius: 50%;
 }
+
+.subheader {
+	margin: 0;
+	@include text-style(0.8rem, 1.3rem, avenirRegular);
+
+	&--bold {
+		@include text-style(0.8rem, 1.3rem, avenirBold);
+	}
+}
+
+.label {
+	color: $silver;
+	@include text-style(0.6rem, 1.3rem, avenirDemi);
+	padding: 0.3rem;
+	margin-bottom: 0;
+}

@@ -207,6 +207,27 @@ body {
   border-radius: 50%;
 }
 
+.subheader {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-family: avenirRegular;
+}
+.subheader--bold {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-family: avenirBold;
+}
+
+.label {
+  color: #afafaf;
+  font-size: 0.6rem;
+  line-height: 1.3rem;
+  font-family: avenirDemi;
+  padding: 0.3rem;
+  margin-bottom: 0;
+}
+
 /* Hero */
 .hero {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
@@ -432,10 +453,17 @@ body {
 /* Comments */
 .comments {
   padding: 0 5%;
+  padding-bottom: 1rem;
+}
+.comments__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: avenirDemi;
 }
 .comments__form-container {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
 }
 .comments__form {
   display: flex;
@@ -444,13 +472,6 @@ body {
 }
 .comments__form-avatar {
   background-image: url("../assets/images/Mohan-muruge.jpg");
-}
-.comments__form-label {
-  color: #afafaf;
-  font-size: 0.6rem;
-  line-height: 1.3rem;
-  font-family: avenirDemi;
-  padding: 0.3rem;
 }
 .comments__form-field {
   height: 2.3rem;
@@ -483,7 +504,12 @@ body {
 }
 .comment__date {
   color: #afafaf;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-family: avenirRegular;
 }
-.comment__name {
-  margin: 0;
+.comment__content {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-family: avenirRegular;
 }/*# sourceMappingURL=bio.css.map */
