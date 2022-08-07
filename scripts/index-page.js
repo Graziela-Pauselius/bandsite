@@ -1,3 +1,9 @@
+//------- Select Elements -----
+const commentsSection = document.querySelector(".comments");
+const form = document.querySelector(".comments__form");
+const nameValue = document.querySelector(".comments__form-input");
+const commentValue = document.querySelector(".comments__form-textarea");
+
 // ------ Comments Data ---------
 const comments = [
 	{
@@ -23,77 +29,8 @@ const comments = [
 	},
 ];
 
-// ------- Create Comment Section -----
-const commentsSection = document.createElement("section");
-commentsSection.classList.add("comments");
-commentsSection;
-document.body.appendChild(commentsSection);
-
-// comment section title
-const title = document.createElement("h2");
-title.classList.add("comments__title");
-title.innerText = "Join the Conversation";
-commentsSection.appendChild(title);
-
-// ------ Comment Form --------
-
-// form container
-const formContainer = document.createElement("div");
-formContainer.classList.add("comments__form-container");
-commentsSection.appendChild(formContainer);
-
-// form avatar
-const formAvatar = document.createElement("img");
-formAvatar.classList.add("comments__form-avatar", "avatar");
-formContainer.appendChild(formAvatar);
-
-// form
-const form = document.createElement("form");
-form.classList.add("comments__form");
-formContainer.appendChild(form);
-
-// form name label
-const nameLabel = document.createElement("label");
-nameLabel.classList.add("comments__form-label", "label");
-nameLabel.setAttribute("for", "name");
-nameLabel.innerText = "NAME";
-form.appendChild(nameLabel);
-
-// form name field
-const nameField = document.createElement("input");
-nameField.classList.add("comments__form-field");
-nameField.setAttribute("type", "text");
-nameField.setAttribute("id", "name");
-nameField.setAttribute("name", "name");
-nameField.setAttribute("value", "Enter your name");
-form.appendChild(nameField);
-
-// form comment label
-const commentLabel = document.createElement("label");
-commentLabel.classList.add("comments__form-label", "label");
-commentLabel.setAttribute("for", "comment");
-commentLabel.innerText = "COMMENT";
-form.appendChild(commentLabel);
-
-// form comment field
-const commentField = document.createElement("textarea");
-commentField.classList.add("comments__form-textarea", "comments__form-field");
-commentField.setAttribute("rows", "10");
-commentField.setAttribute("cols", "30");
-commentField.setAttribute("id", "comment");
-commentField.setAttribute("name", "comment");
-commentField.innerText = "Add a new comment";
-form.appendChild(commentField);
-
-// form button
-const btn = document.createElement("button");
-btn.classList.add("comments__form-btn", "btn");
-btn.innerText = "COMMENT";
-form.appendChild(btn);
-
-//comments container
 const commentsContainer = document.createElement("div");
-commentsContainer.classList.add("comments__container");
+commentsContainer.classList.add("comment");
 commentsSection.appendChild(commentsContainer);
 
 // ------- Display Comments Function ----
@@ -143,22 +80,19 @@ const displayComment = (obj) => {
 
 displayComment(comments);
 
-const nameValue = document.querySelector(".comments__form-field");
-const commentValue = document.querySelector(".comments__form-textarea");
-
 //  ----- Date formatted ------
-// const today = new Date();
-// const day = today.getDate();
-// const month = today.getMonth() + 1;
-// const year = today.getFullYear();
+let today = new Date();
+let day = today.getDate();
+let month = today.getMonth() + 1;
+let year = today.getFullYear();
 
-// if (day < 10) day = "0" + day;
-// if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+if (month < 10) month = "0" + month;
 
-// const dateFormated = day + "/" + month + "/" + year;
+let dateFormated = day + "/" + month + "/" + year;
 
 // Handler function
-const addNewComment = () => {
+const newCommentsHandler = () => {
 	const newName = nameValue.value;
 	console.log(newName);
 	const newComment = commentValue.value;
@@ -167,7 +101,7 @@ const addNewComment = () => {
 	let newDisplayComment = {
 		name: newName,
 		content: newComment,
-		// date: dateFormated,
+		date: dateFormated,
 	};
 
 	const newCommentsList = comments;
@@ -179,6 +113,6 @@ const addNewComment = () => {
 // Event Listner
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
-	displayComment(addNewComment());
+	displayComment(newCommentsHandler());
 	console.log(e);
 });

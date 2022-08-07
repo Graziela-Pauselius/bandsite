@@ -206,6 +206,12 @@ body {
   background-size: cover;
   border-radius: 50%;
 }
+@media (min-width: 768px) {
+  .avatar {
+    height: 3rem;
+    width: 3rem;
+  }
+}
 
 .subheader {
   margin: 0;
@@ -213,10 +219,24 @@ body {
   line-height: 1.3rem;
   font-family: avenirRegular;
 }
+@media (min-width: 768px) {
+  .subheader {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-family: avenirRegular;
+  }
+}
 .subheader--bold {
   font-size: 0.8rem;
   line-height: 1.3rem;
   font-family: avenirBold;
+}
+@media (min-width: 768px) {
+  .subheader--bold {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-family: avenirBold;
+  }
 }
 
 .label {
@@ -455,25 +475,50 @@ body {
   padding: 0 5%;
   padding-bottom: 1rem;
 }
+@media (min-width: 1280px) {
+  .comments {
+    padding: 0 10%;
+  }
+}
 .comments__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: avenirDemi;
 }
+@media (min-width: 768px) {
+  .comments__title {
+    font-size: 2.3rem;
+    line-height: 2.8rem;
+    font-family: avenirDemi;
+    padding-top: 3rem;
+  }
+}
 .comments__form-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .comments__form-container {
+    margin: 0 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form-container {
+    margin-left: 25%;
+    width: 53%;
+  }
 }
 .comments__form {
   display: flex;
   flex-direction: column;
   width: 82%;
+  margin-left: 1rem;
 }
 .comments__form-avatar {
   background-image: url("../assets/images/Mohan-muruge.jpg");
 }
-.comments__form-field {
+.comments__form-input {
   height: 2.3rem;
   width: 100%;
   border-radius: 0.3rem;
@@ -481,21 +526,41 @@ body {
   border: 1px solid #e1e1e1;
   background-color: #fafafa;
 }
+@media (min-width: 768px) {
+  .comments__form-input {
+    height: 3rem;
+    padding: 1rem;
+  }
+}
 .comments__form-textarea {
   height: 8rem;
+  background-color: #fafafa;
+}
+@media (min-width: 768px) {
+  .comments__btn-container {
+    display: flex;
+    align-self: flex-end;
+    width: 32%;
+  }
 }
 
+@media (min-width: 1280px) {
+  .comment {
+    margin-left: 25%;
+    width: 56%;
+    padding-bottom: 2.5rem;
+  }
+}
 .comment__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   border-bottom: 1px solid #e1e1e1;
   padding-top: 1rem;
+  margin: 0 2rem;
 }
 .comment__container-info {
-  width: 82%;
-}
-.comment__avatar {
-  background-color: #e1e1e1;
+  width: 85%;
+  margin-left: 1rem;
 }
 .comment__box {
   display: flex;
@@ -508,8 +573,25 @@ body {
   line-height: 1.3rem;
   font-family: avenirRegular;
 }
+@media (min-width: 768px) {
+  .comment__date {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-family: avenirRegular;
+  }
+}
+.comment__avatar {
+  background-color: #e1e1e1;
+}
 .comment__content {
   font-size: 0.8rem;
   line-height: 1.3rem;
   font-family: avenirRegular;
+}
+@media (min-width: 768px) {
+  .comment__content {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-family: avenirRegular;
+  }
 }/*# sourceMappingURL=bio.css.map */

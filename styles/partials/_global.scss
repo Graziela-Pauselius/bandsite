@@ -188,14 +188,27 @@ body {
 	background-position: center;
 	background-size: cover;
 	border-radius: 50%;
+
+	@include tablet {
+		height: 3rem;
+		width: 3rem;
+	}
 }
 
 .subheader {
 	margin: 0;
 	@include text-style(0.8rem, 1.3rem, avenirRegular);
 
+	@include tablet {
+		@include text-style(0.9rem, 1.4rem, avenirRegular);
+	}
+
 	&--bold {
 		@include text-style(0.8rem, 1.3rem, avenirBold);
+
+		@include tablet {
+			@include text-style(0.9rem, 1.4rem, avenirBold);
+		}
 	}
 }
 

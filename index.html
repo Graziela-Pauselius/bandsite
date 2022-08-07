@@ -118,6 +118,41 @@
 					/>
 				</div>
 			</section>
+			<section class="comments">
+				<h2 class="comments__title">Join the Conversation</h2>
+				<div class="comments__form-container">
+					<img
+						class="comments__form-avatar avatar"
+						src="./assets/images/Mohan-muruge.jpg"
+					/>
+					<form class="comments__form">
+						<label class="comments__form-label label" for="name">NAME</label>
+						<input
+							class="comments__form-input"
+							type="text"
+							name="name"
+							placeholder="Enter your name"
+							id="name"
+							required
+						/>
+						<label class="comments__form-label label" for="textarea"
+							>COMMENT</label
+						>
+						<textarea
+							class="comments__form-textarea"
+							type="textarea"
+							name="textarea"
+							placeholder="Add a new comment"
+							id="textarea"
+							required
+						>
+						</textarea>
+						<div class="comments__btn-container">
+							<button class="comments__form-btn btn">COMMENT</button>
+						</div>
+					</form>
+				</div>
+			</section>
 		</main>
 		<script src="./scripts/index-page.js"></script>
 	</body>
@@ -125,21 +160,28 @@
 		<div class="footer__header">
 			<h2 class="footer__title">Get in Touch</h2>
 			<div class="footer__icons-box">
-				<img
-					class="footer__icon"
-					src="./assets/icons/SVG/Icon-instagram.svg"
-					alt="instagram-icon"
-				/>
-				<img
-					class="footer__icon"
-					src="./assets/icons/SVG/Icon-facebook.svg"
-					alt="facebook-icon"
-				/>
-				<img
-					class="footer__icon"
-					src="./assets/icons/SVG/Icon-twitter.svg"
-					alt="twitter-icon"
-				/>
+				<a class="footer__icon-links" href="https://www.instagram.com/">
+					<img
+						class="footer__icon"
+						src="./assets/icons/SVG/Icon-instagram.svg"
+						alt="instagram-icon"
+					/>
+				</a>
+				<a class="footer__icon-links" href="https://www.facebook.com/">
+					<img
+						class="footer__icon"
+						src="./assets/icons/SVG/Icon-facebook.svg"
+						alt="facebook-icon"
+					/>
+				</a>
+
+				<a class="footer__icon-links" href="https://twitter.com/">
+					<img
+						class="footer__icon"
+						src="./assets/icons/SVG/Icon-twitter.svg"
+						alt="twitter-icon"
+					/>
+				</a>
 			</div>
 		</div>
 		<div class="footer__info">
@@ -187,11 +229,13 @@
 				</div>
 			</div>
 		</div>
-		<img
-			class="footer__logo"
-			src="./assets/logos/Logo-bandsite.svg"
-			alt="bandsite-logo"
-		/>
+		<a class="footer__logo-link" href="./index.html">
+			<img
+				class="footer__logo"
+				src="../assets/logos/Logo-bandsite.svg"
+				alt="bandsite-logo"
+			/>
+		</a>
 		<p class="footer__text footer__text--copy-right">
 			Copyright The Bees Knees © 2021 All Rights Reserved
 		</p>

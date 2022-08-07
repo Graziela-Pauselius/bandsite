@@ -1,5 +1,7 @@
 @use "./partials/global" as *;
 @use "./partials/colors" as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
 .hero {
 	background-image: linear-gradient(
@@ -11,35 +13,97 @@
 	height: 50vh;
 	display: flex;
 	align-items: center;
-	display: flex;
 	flex-direction: column;
 	padding: 0 5%;
 
+	@include tablet {
+		height: 100vh;
+	}
+
+	@include desktop {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 0 10rem;
+	}
+
 	&__text {
 		color: $white;
+		@include tablet {
+			@include text-style(1.5rem, 2rem, avenirDemi);
+			margin-top: 3rem;
+		}
 	}
 
 	&__title {
 		color: $white;
 		width: 65%;
+		@include tablet {
+			@include text-style(3.8rem, 4.25rem, avenirBold);
+			width: 80%;
+			margin: 1rem 0 3rem 0;
+		}
 	}
 
-	&__text {
-		color: $white;
-	}
+	&__music-container {
+		@include tablet {
+			display: flex;
+			align-self: flex-start;
+		}
 
-	// &__music-container {
-	// 	width: 80%;
-	// }
+		@include desktop {
+			align-self: center;
+		}
+	}
 }
 
 .show {
 	&__section {
 		padding: 0 5%;
 		margin-bottom: 1rem;
+
+		@include desktop {
+			display: flex;
+			justify-content: space-around;
+		}
 	}
 
-	&__container {
+	&__header-container {
+		width: 10%;
+	}
+
+	&__header {
+		@include text-style(1.5rem, 2rem, avenirDemi);
+
+		@include tablet {
+			@include text-style(2.3rem, 2.8rem, avenirDemi);
+		}
+	}
+	&__list {
+		@include desktop {
+			width: 65%;
+		}
+	}
+
+	&__box {
 		border-bottom: 1px solid $mercury;
+
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__label {
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__btn {
+		@include tablet {
+			width: 25%;
+		}
 	}
 }
