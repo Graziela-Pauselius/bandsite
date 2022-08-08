@@ -21,16 +21,14 @@
 	}
 
 	@include desktop {
-		display: flex;
 		flex-direction: row;
-		align-items: center;
 		padding: 0 10rem;
 	}
 
 	&__text {
 		color: $white;
 		@include tablet {
-			@include text-style(1.5rem, 2rem, avenirDemi);
+			@include text-style(1.3rem, 2rem, avenirDemi);
 			margin-top: 3rem;
 		}
 	}
@@ -39,20 +37,27 @@
 		color: $white;
 		width: 65%;
 		@include tablet {
-			@include text-style(3.8rem, 4.25rem, avenirBold);
-			width: 80%;
+			@include text-style(3.8rem, 4.25rem, avenirDemi);
+			width: 81%;
 			margin: 1rem 0 3rem 0;
 		}
 	}
 
 	&__music-container {
 		@include tablet {
-			display: flex;
 			align-self: flex-start;
 		}
 
 		@include desktop {
 			align-self: center;
+			padding-top: 5rem;
+		}
+	}
+
+	&__music {
+		@include tablet {
+			width: 24rem;
+			height: 8rem;
 		}
 	}
 }
@@ -65,6 +70,8 @@
 		@include desktop {
 			display: flex;
 			justify-content: space-around;
+			align-items: baseline;
+			padding-top: 2rem;
 		}
 	}
 
@@ -88,6 +95,16 @@
 	&__box {
 		border-bottom: 1px solid $mercury;
 
+		&:hover {
+			cursor: pointer;
+			background-color: $alabaster;
+		}
+
+		&:target {
+			cursor: pointer;
+			background-color: $mercury;
+		}
+
 		@include tablet {
 			display: flex;
 			justify-content: space-between;
@@ -96,14 +113,39 @@
 	}
 
 	&__label {
+		color: $silver;
+		@include text-style(0.6rem, 1.3rem, avenirDemi);
+		padding: 0.3rem;
+		margin-bottom: 0;
+
 		@include tablet {
 			display: none;
+		}
+
+		&--container {
+			display: none;
+
+			@include tablet {
+				display: flex;
+			}
+		}
+
+		&--special {
+			color: $silver;
+			@include text-style(0.8rem, 1.3rem, avenirDemi);
+			padding: 0.3rem;
+			margin-bottom: 0;
+			margin-right: 9.3rem;
 		}
 	}
 
 	&__btn {
 		@include tablet {
-			width: 25%;
+			width: 22%;
 		}
+	}
+
+	&__event-selected {
+		background-color: $mercury;
 	}
 }

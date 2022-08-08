@@ -45,7 +45,7 @@ const displayShows = (obj) => {
 
 		//Date
 		const showDateTitle = document.createElement("p");
-		showDateTitle.classList.add("show__label", "label");
+		showDateTitle.classList.add("show__label", "show__label-hide");
 		showDateTitle.innerText = "DATE";
 		showItem.appendChild(showDateTitle);
 
@@ -56,7 +56,7 @@ const displayShows = (obj) => {
 
 		// Venue
 		const showVenueTitle = document.createElement("p");
-		showVenueTitle.classList.add("show__label", "label");
+		showVenueTitle.classList.add("show__label", "show__label-hide");
 		showVenueTitle.innerText = "VENUE";
 		showItem.appendChild(showVenueTitle);
 
@@ -67,7 +67,7 @@ const displayShows = (obj) => {
 
 		// Location
 		const locationTitle = document.createElement("p");
-		locationTitle.classList.add("show__label", "label");
+		locationTitle.classList.add("show__label", "show__label-hide");
 		locationTitle.innerText = "LOCATION";
 		showItem.appendChild(locationTitle);
 
@@ -85,3 +85,13 @@ const displayShows = (obj) => {
 };
 
 displayShows(concerts);
+
+function handleClick(event) {
+	const itemSelect = event.target;
+	itemSelect.classList.add("show__event-selected");
+
+	event.target.reset();
+}
+
+const showBox = document.querySelector(".show__box");
+showBox.addEventListener("click", handleClick);
