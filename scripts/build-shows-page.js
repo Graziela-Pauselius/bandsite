@@ -1,43 +1,27 @@
 //-------- Select Elements -------
 const showList = document.querySelector(".show__list");
-//------- Concert Data ------
+//------- Show Data Base ------
 
-const concerts = [
-	{
-		date: "Mon Sept 06 2021",
-		venue: "Ronald Lane ",
-		location: "San Francisco, CA",
-	},
-	{
-		date: "Tue Sept 21 2021",
-		venue: "Pier 3 East",
-		location: "San Francisco, CA",
-	},
-	{
-		date: "Fri Oct 15 2021",
-		venue: "View Lounge",
-		location: "San Francisco, CA",
-	},
-	{
-		date: "Sat Nov 06 2021",
-		venue: "Hyatt Agency",
-		location: "San Francisco, CA",
-	},
-	{
-		date: "Fri Nov 26 2021",
-		venue: "Moscow Center",
-		location: "San Francisco, CA",
-	},
-	{
-		date: "Wed Dec 15 2021",
-		venue: "Press Club",
-		location: "San Francisco, CA",
-	},
-];
+let showDates = [];
+
+//----- Shows Date Function -------
+const options = {
+	weekday: "short",
+	month: "short",
+	day: "numeric",
+	year: "numeric",
+};
+
+const dateFormated = (timestamp) => {
+	let date = new Date(timestamp);
+	let formatedDate = date.toLocaleString("en-US", options);
+
+	return formatedDate;
+};
 
 // ----- Display Shows Function ------
-const displayShows = (obj) => {
-	for (let i = 0; i < obj.length; i++) {
+const displayShows = () => {
+	showDates.forEach((element) => {
 		// Show Item Container
 		const showItem = document.createElement("div");
 		showItem.classList.add("show__box");
@@ -51,7 +35,7 @@ const displayShows = (obj) => {
 
 		const showDate = document.createElement("p");
 		showDate.classList.add("show__text", "subheader", "subheader--bold");
-		showDate.innerText = obj[i].date;
+		showDate.innerText = dateFormated(element.date);
 		showItem.appendChild(showDate);
 
 		// Venue
@@ -62,7 +46,7 @@ const displayShows = (obj) => {
 
 		const showVenue = document.createElement("p");
 		showVenue.classList.add("show__text", "subheader");
-		showVenue.innerText = obj[i].venue;
+		showVenue.innerText = element.place;
 		showItem.appendChild(showVenue);
 
 		// Location
@@ -73,7 +57,7 @@ const displayShows = (obj) => {
 
 		const location = document.createElement("p");
 		location.classList.add("show__text", "subheader");
-		location.innerText = obj[i].location;
+		location.innerText = element.location;
 		showItem.appendChild(location);
 
 		// Button
@@ -81,17 +65,26 @@ const displayShows = (obj) => {
 		btn.classList.add("show__btn", "btn");
 		btn.innerText = "BUY TICKETS";
 		showItem.appendChild(btn);
-	}
+	});
 };
 
-displayShows(concerts);
+axios
+	.get(
+		"https://project-1-api.herokuapp.com/showdates?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651"
+	)
+	.then((response) => {
+		showDates = response.data;
+		displayShows();
+	});
 
-function handleClick(event) {
-	const itemSelect = event.target;
-	itemSelect.classList.add("show__event-selected");
+// Selected Event Handler
+const showBox = document.querySelectorAll(".show__box");
 
-	event.target.reset();
-}
-
-const showBox = document.querySelector(".show__box");
-showBox.addEventListener("click", handleClick);
+showBox.forEach((show) => {
+	show.addEventListener("click", (event) => {
+		showBox.forEach((item) => {
+			item.classList.remove("show__event-selected");
+		});
+		event.currentTarget.classList.add("show__event-selected");
+	});
+});

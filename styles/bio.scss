@@ -313,9 +313,6 @@
 		}
 	}
 
-	// &__name {
-
-	// }
 	&__avatar {
 		background-color: $mercury;
 	}
@@ -326,5 +323,25 @@
 		@include tablet {
 			@include text-style(0.9rem, 1.4rem, avenirRegular);
 		}
+	}
+
+	&__like-container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__btn {
+		background: url("../assets/icons/heart1.jpg") no-repeat;
+		background-size: cover, contain;
+		cursor: pointer;
+		width: 2rem;
+		height: 2rem;
+		border: none;
+		margin: 1rem 0;
+	}
+
+	&__counter {
+		padding: 0 1rem;
 	}
 }

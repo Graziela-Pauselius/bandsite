@@ -349,10 +349,6 @@ body {
   cursor: pointer;
   background-color: #fafafa;
 }
-.show__box:target {
-  cursor: pointer;
-  background-color: #e1e1e1;
-}
 @media (min-width: 768px) {
   .show__box {
     display: flex;
@@ -396,5 +392,6 @@ body {
   }
 }
 .show__event-selected {
+  cursor: pointer;
   background-color: #e1e1e1;
 }/*# sourceMappingURL=shows.css.map */

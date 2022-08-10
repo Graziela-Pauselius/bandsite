@@ -100,11 +100,6 @@
 			background-color: $alabaster;
 		}
 
-		&:target {
-			cursor: pointer;
-			background-color: $mercury;
-		}
-
 		@include tablet {
 			display: flex;
 			justify-content: space-between;
@@ -146,6 +141,7 @@
 	}
 
 	&__event-selected {
+		cursor: pointer;
 		background-color: $mercury;
 	}
 }

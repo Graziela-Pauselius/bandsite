@@ -5,6 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./styles/bio.css" />
+		<script
+			src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+			defer
+		></script>
+		<script src="./scripts/index-page.js" defer></script>
+
 		<title>BANDSITE</title>
 	</head>
 	<body>
@@ -118,6 +124,7 @@
 					/>
 				</div>
 			</section>
+			<!-- Comments | Form -->
 			<section class="comments">
 				<h2 class="comments__title">Join the Conversation</h2>
 				<div class="comments__form-container">
@@ -135,15 +142,15 @@
 							id="name"
 							required
 						/>
-						<label class="comments__form-label label" for="textarea"
+						<label class="comments__form-label label" for="comment"
 							>COMMENT</label
 						>
 						<textarea
 							class="comments__form-textarea"
 							type="textarea"
-							name="textarea"
+							name="comment"
 							placeholder="Add a new comment"
-							id="textarea"
+							id="comment"
 							required
 						>
 						</textarea>
@@ -153,8 +160,14 @@
 					</form>
 				</div>
 			</section>
+			<section class="comment">
+				<div class="comment__container">
+					<div class="comment__info-container">
+						<button class="comment__likes"></button>
+					</div>
+				</div>
+			</section>
 		</main>
-		<script src="./scripts/index-page.js"></script>
 	</body>
 	<footer class="footer">
 		<div class="footer__header">
