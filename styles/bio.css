@@ -419,6 +419,11 @@ body {
   background-color: #fafafa;
   padding: 0 5%;
 }
+@media (min-width: 768px) {
+  .gallery {
+    padding-bottom: 1.3rem;
+  }
+}
 @media (min-width: 1280px) {
   .gallery {
     padding: 0 10%;
@@ -446,7 +451,7 @@ body {
 }
 @media (min-width: 768px) and (min-width: 768px) {
   .gallery__container {
-    margin-bottom: 1rem;
+    justify-content: space-between;
   }
 }
 .gallery__img {
@@ -460,13 +465,14 @@ body {
 }
 @media (min-width: 768px) {
   .gallery__img {
-    width: 33%;
-    padding: 0.8rem;
+    width: 13.5rem;
+    padding-bottom: 1.3rem;
   }
 }
 @media (min-width: 1280px) {
   .gallery__img {
-    padding: 0 1.2rem 1.2rem 0;
+    width: 20rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -516,7 +522,19 @@ body {
   margin-left: 1rem;
 }
 .comments__form-avatar {
+  height: 2.3rem;
+  width: 2.3rem;
   background-image: url("../assets/images/Mohan-muruge.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 1.6rem;
+}
+@media (min-width: 768px) {
+  .comments__form-avatar {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 .comments__form-input {
   height: 2.3rem;
@@ -556,7 +574,11 @@ body {
   justify-content: center;
   border-bottom: 1px solid #e1e1e1;
   padding-top: 1rem;
-  margin: 0 2rem;
+}
+@media (min-width: 768px) {
+  .comment__container {
+    margin: 0 2rem;
+  }
 }
 .comment__container-info {
   width: 85%;
@@ -595,12 +617,25 @@ body {
     font-family: avenirRegular;
   }
 }
+.comment__btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment__delete-btn {
+  color: #000000;
+  padding: 0.3rem;
+  background-color: #e1e1e1;
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 0.6rem;
+}
 .comment__like-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.comment__btn {
+.comment__like-btn {
   background: url("../assets/icons/heart1.jpg") no-repeat;
   background-size: cover, contain;
   cursor: pointer;

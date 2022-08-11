@@ -147,6 +147,10 @@
 	background-color: $alabaster;
 	padding: 0 5%;
 
+	@include tablet {
+		padding-bottom: 1.3rem;
+	}
+
 	@include desktop {
 		padding: 0 10%;
 	}
@@ -170,7 +174,7 @@
 			flex-wrap: wrap;
 
 			@include tablet {
-				margin-bottom: 1rem;
+				justify-content: space-between;
 			}
 		}
 	}
@@ -186,12 +190,13 @@
 		}
 
 		@include tablet {
-			width: 33%;
-			padding: 0.8rem;
+			width: 13.5rem;
+			padding-bottom: 1.3rem;
 		}
 
 		@include desktop {
-			padding: 0 1.2rem 1.2rem 0;
+			width: 20rem;
+			padding-bottom: 1.5rem;
 		}
 	}
 }
@@ -242,7 +247,18 @@
 	}
 
 	&__form-avatar {
+		height: 2.3rem;
+		width: 2.3rem;
 		background-image: url("../assets/images/Mohan-muruge.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-top: 1.6rem;
+
+		@include tablet {
+			height: 3rem;
+			width: 3rem;
+		}
 	}
 
 	// &__form-label {
@@ -290,7 +306,10 @@
 		justify-content: center;
 		border-bottom: 1px solid $mercury;
 		padding-top: 1rem;
-		margin: 0 2rem;
+
+		@include tablet {
+			margin: 0 2rem;
+		}
 	}
 
 	&__container-info {
@@ -325,13 +344,28 @@
 		}
 	}
 
+	&__btn-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__delete-btn {
+		color: $dark-black;
+		padding: 0.3rem;
+		background-color: $mercury;
+		border-radius: 0.3rem;
+		border: none;
+		font-size: 0.6rem;
+	}
+
 	&__like-container {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
 	}
 
-	&__btn {
+	&__like-btn {
 		background: url("../assets/icons/heart1.jpg") no-repeat;
 		background-size: cover, contain;
 		cursor: pointer;

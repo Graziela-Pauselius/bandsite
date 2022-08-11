@@ -73,16 +73,44 @@ const displayComment = () => {
 		content.innerText = element.comment;
 		commentInfoContainer.appendChild(content);
 
+		// btns container
+		const btnContainer = document.createElement("div");
+		btnContainer.classList.add("comment__btn-container");
+		commentInfoContainer.appendChild(btnContainer);
+
+		//delete btn
+		const deletebtn = document.createElement("button");
+		deletebtn.classList.add("comment__delete-btn");
+		deletebtn.innerText = "Delete";
+		btnContainer.appendChild(deletebtn);
+
+		deletebtn.addEventListener("click", () => {
+			axios
+				.delete(
+					`https://project-1-api.herokuapp.com/comments/${element.id}/api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651`
+				)
+				.then((response) => console.log(response));
+		});
+
 		// like container
 		const likeContainer = document.createElement("div");
 		likeContainer.classList.add("comment__like-container");
-		commentInfoContainer.appendChild(likeContainer);
+		btnContainer.appendChild(likeContainer);
 
 		// like button
 		const likeBtn = document.createElement("button");
-		likeBtn.classList.add("comment__btn");
+		likeBtn.classList.add("comment__like-btn");
 		likeContainer.appendChild(likeBtn);
 
+		likeBtn.addEventListener("click", () => {
+			axios
+				.put(
+					`https://project-1-api.herokuapp.com/comments/${element.id}/like?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651`
+				)
+				.then((response) => {
+					console.log(response);
+				});
+		});
 		// like counter
 		const likeCounter = document.createElement("span");
 		likeCounter.classList.add("comment__counter");
@@ -124,6 +152,3 @@ form.addEventListener("submit", (e) => {
 			e.target.reset();
 		});
 });
-
-const heartLikes = document.querySelector(".comment__like-container");
-console.log(heartLikes);
