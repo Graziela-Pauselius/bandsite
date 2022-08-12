@@ -20,7 +20,55 @@ const dateFormated = (timestamp) => {
 	return day + "/" + month + "/" + year;
 };
 
-const displayComment = (element) => {
+// ------ Axios Function -----------
+
+const apiUrl =
+	"https://project-1-api.herokuapp.com/comments?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651";
+
+const getAPI = () => {
+	axios.get(apiUrl).then((response) => {
+		comments = response.data;
+		comments.sort((a, b) => {
+			return b.timestamp - a.timestamp;
+		});
+		displayAllComments();
+	});
+};
+
+getAPI();
+
+const postAPI = (obj) => {
+	axios.post(apiUrl, obj).then((response) => {
+		commentsSection.innerHTML = null;
+		comments.unshift(response.data);
+		displayAllComments();
+	});
+};
+
+const likeAPI = (comment) => {
+	axios
+		.put(
+			`https://project-1-api.herokuapp.com/comments/${comment}/like?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651`
+		)
+		.then((response) => {
+			commentsSection.innerHTML = null;
+			getAPI();
+		});
+};
+
+const deleteAPI = (comment) => {
+	axios
+		.delete(
+			`https://project-1-api.herokuapp.com/comments/${comment}?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651`
+		)
+		.then((response) => {
+			commentsSection.innerHTML = null;
+			getAPI();
+		});
+};
+
+// ---- Display Single Comment  Function -------
+const displayComment = (comment) => {
 	// comment container
 	const commentContainer = document.createElement("div");
 	commentContainer.classList.add("comments__container");
@@ -44,19 +92,19 @@ const displayComment = (element) => {
 	// comment name
 	const name = document.createElement("h4");
 	name.classList.add("comments__name", "comments__name--bold");
-	name.innerText = element.name;
+	name.innerText = comment.name;
 	commentBox.appendChild(name);
 
 	// comment date
 	const date = document.createElement("span");
 	date.classList.add("comments__date");
-	date.innerText = dateFormated(element.timestamp);
+	date.innerText = dateFormated(comment.timestamp);
 	commentBox.appendChild(date);
 
 	// comment content
 	const content = document.createElement("p");
 	content.classList.add("comments__content");
-	content.innerText = element.comment;
+	content.innerText = comment.comment;
 	commentInfoContainer.appendChild(content);
 
 	// btns container
@@ -71,26 +119,7 @@ const displayComment = (element) => {
 	btnContainer.appendChild(deletebtn);
 
 	deletebtn.addEventListener("click", () => {
-		axios
-			.delete(
-				`https://project-1-api.herokuapp.com/comments/${element.id}?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651`
-			)
-			.then((response) => {
-				commentsSection.innerHTML = "";
-				// console.log(response);
-				// displayAllComments();
-				axios
-					.get(
-						"https://project-1-api.herokuapp.com/comments?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651"
-					)
-					.then((response) => {
-						comments = response.data;
-						comments.sort((a, b) => {
-							return b.timestamp - a.timestamp;
-						});
-						displayAllComments();
-					});
-			});
+		deleteAPI(comment.id);
 	});
 
 	// like container
@@ -104,21 +133,13 @@ const displayComment = (element) => {
 	likeContainer.appendChild(likeBtn);
 
 	likeBtn.addEventListener("click", () => {
-		axios.put(
-			`https://project-1-api.herokuapp.com/comments/${element.id}/like?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651`
-		);
-		// .then((response) => {
-		// 	console.log(response);
-		// 	commentsSection.innerHTML = null;
-		// 	comments.unshift(response.data);
-		// 	displayComment();
-		// 	e.target.reset();
-		// });
+		likeAPI(comment.id);
 	});
+
 	// like counter
 	const likeCounter = document.createElement("span");
 	likeCounter.classList.add("comments__counter");
-	likeCounter.innerText = element.likes;
+	likeCounter.innerText = comment.likes;
 	likeContainer.appendChild(likeCounter);
 };
 
@@ -128,39 +149,15 @@ const displayAllComments = () => {
 	});
 };
 
-axios
-	.get(
-		"https://project-1-api.herokuapp.com/comments?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651"
-	)
-	.then((response) => {
-		comments = response.data;
-		comments.sort((a, b) => {
-			return b.timestamp - a.timestamp;
-		});
-		displayAllComments();
-	});
-
 //----- Event Listner ----------
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
-
-	// console.log(e);
 
 	const newComment = {
 		name: e.target.name.value,
 		comment: e.target.comment.value,
 	};
 
-	axios
-		.post(
-			"https://project-1-api.herokuapp.com/comments?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651",
-			newComment
-		)
-		.then((res) => {
-			commentsSection.innerHTML = null;
-			comments.unshift(res.data);
-			// console.log(comments);
-			displayAllComments();
-			e.target.reset();
-		});
+	postAPI(newComment);
+	e.target.reset();
 });
