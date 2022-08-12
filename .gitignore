@@ -1,3 +1,5 @@
 /assets/CopyDeck
 /styles/bio.css.map
 *.DS_Store
+/.vscode
+/styles/shows.css.map

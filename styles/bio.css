@@ -1,16 +1,16 @@
 /* Fonts */
 @font-face {
-  font-family: avenirRegular;
+  font-family: "Avenir Next LT Pro";
   src: url("/assets/fonts/AvenirNextLTPro-Regular.otf"), url("/assets/fonts/alternativeFiles/AvenirNextLTPro.ttf");
   font-weight: 400;
 }
 @font-face {
-  font-family: avenirDemi;
+  font-family: "Avenir Next LT Pro";
   src: url("/assets/fonts/AvenirNextLTPro-Demi.otf"), url("/assets/fonts/alternativeFiles/AvenirNextLTProDemi.ttf");
   font-weight: 600;
 }
 @font-face {
-  font-family: avenirBold;
+  font-family: "Avenir Next LT Pro";
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf"), url("/assets/fonts/alternativeFiles/AvenirNextLTProBold.ttf");
   font-weight: 700;
 }
@@ -22,6 +22,7 @@
 
 body {
   margin: 0;
+  font-family: "Avenir Next LT Pro";
 }
 
 /* Header */
@@ -104,13 +105,13 @@ body {
 .footer__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: avenirDemi;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .footer__title {
     font-size: 2.3rem;
     line-height: 2.8rem;
-    font-family: avenirDemi;
+    font-weight: 600;
   }
 }
 .footer__icons-box {
@@ -160,13 +161,13 @@ body {
   margin: 0;
   font-size: 0.8rem;
   line-height: 1.1rem;
-  font-family: avenirRegular;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .footer__text {
     font-size: 0.9rem;
     line-height: 1.2rem;
-    font-family: avenirRegular;
+    font-weight: 400;
   }
 }
 .footer__text--bold {
@@ -196,56 +197,7 @@ body {
   margin: 1rem 0;
   font-size: 1rem;
   line-height: 1.3rem;
-  font-family: avenirDemi;
-}
-
-.avatar {
-  height: 2.3rem;
-  width: 2.3rem;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
-}
-@media (min-width: 768px) {
-  .avatar {
-    height: 3rem;
-    width: 3rem;
-  }
-}
-
-.subheader {
-  margin: 0;
-  font-size: 0.8rem;
-  line-height: 1.3rem;
-  font-family: avenirRegular;
-}
-@media (min-width: 768px) {
-  .subheader {
-    font-size: 0.9rem;
-    line-height: 1.4rem;
-    font-family: avenirRegular;
-  }
-}
-.subheader--bold {
-  font-size: 0.8rem;
-  line-height: 1.3rem;
-  font-family: avenirBold;
-}
-@media (min-width: 768px) {
-  .subheader--bold {
-    font-size: 0.9rem;
-    line-height: 1.4rem;
-    font-family: avenirBold;
-  }
-}
-
-.label {
-  color: #afafaf;
-  font-size: 0.6rem;
-  line-height: 1.3rem;
-  font-family: avenirDemi;
-  padding: 0.3rem;
-  margin-bottom: 0;
+  font-weight: 600;
 }
 
 /* Hero */
@@ -265,21 +217,21 @@ body {
 @media (min-width: 1280px) {
   .hero {
     background-position: top;
-    height: 140vh;
+    height: 100vh;
   }
 }
 .hero__title {
   color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: avenirDemi;
+  font-weight: 600;
   padding: 5%;
 }
 @media (min-width: 768px) {
   .hero__title {
     font-size: 3.8rem;
     line-height: 4.3rem;
-    font-family: avenirDemi;
+    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
@@ -297,62 +249,22 @@ body {
     padding: 0 10%;
   }
 }
-@media (min-width: 768px) {
-  .about__content-box {
-    padding: 0 9%;
-  }
-}
 .about__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: avenirDemi;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .about__title {
     margin-top: 3rem;
     font-size: 2.3rem;
     line-height: 2.8rem;
-    font-family: avenirDemi;
+    font-weight: 600;
   }
-}
-.about__slogan {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.4rem;
-  font-family: avenirDemi;
 }
 @media (min-width: 768px) {
-  .about__slogan {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: avenirDemi;
-    margin-top: 2rem;
-    letter-spacing: -0.9px;
-  }
-}
-@media (min-width: 1280px) {
-  .about__slogan {
-    width: 85%;
-    letter-spacing: normal;
-  }
-}
-.about__author {
-  margin-top: 0.7rem;
-  font-size: 0.9rem;
-  line-height: 1.4rem;
-  font-family: avenirDemi;
-}
-@media (min-width: 768px) {
-  .about__author {
-    font-size: 1rem;
-    line-height: 1.4rem;
-    font-family: avenirDemi;
-  }
-}
-@media (min-width: 1280px) {
-  .about__author {
-    font-size: 1rem;
-    margin-top: 1rem;
+  .about__container {
+    padding: 0 9%;
   }
 }
 .about__img {
@@ -369,17 +281,57 @@ body {
     height: 90vh;
   }
 }
+.about__slogan {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .about__slogan {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    letter-spacing: -0.9px;
+  }
+}
+@media (min-width: 1280px) {
+  .about__slogan {
+    width: 85%;
+    letter-spacing: normal;
+  }
+}
+.about__author {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .about__author {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1280px) {
+  .about__author {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
 .about__subtitle {
   margin-top: 1.6rem;
   font-size: 0.9rem;
   line-height: 1.4rem;
-  font-family: avenirDemi;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .about__subtitle {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-family: avenirDemi;
+    font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
@@ -389,7 +341,7 @@ body {
   }
 }
 @media (min-width: 768px) {
-  .about__info-box {
+  .about__info-container {
     display: flex;
     justify-content: space-between;
   }
@@ -397,14 +349,14 @@ body {
 .about__text {
   font-size: 0.8rem;
   line-height: 1.1rem;
-  font-family: avenirRegular;
+  font-weight: 400;
   letter-spacing: 0.3px;
 }
 @media (min-width: 768px) {
   .about__text {
     font-size: 0.9rem;
     line-height: 1.4rem;
-    font-family: avenirRegular;
+    font-weight: 400;
     letter-spacing: -0.3px;
   }
 }
@@ -432,14 +384,14 @@ body {
 .gallery__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: avenirDemi;
+  font-weight: 600;
   padding-top: 1.4rem;
 }
 @media (min-width: 768px) {
   .gallery__title {
     font-size: 2.3rem;
     line-height: 2.8rem;
-    font-family: avenirDemi;
+    font-weight: 600;
     padding-top: 3rem;
   }
 }
@@ -476,52 +428,52 @@ body {
   }
 }
 
-/* Comments */
-.comments {
-  padding: 0 5%;
-  padding-bottom: 1rem;
-}
-@media (min-width: 1280px) {
-  .comments {
-    padding: 0 10%;
-  }
-}
-.comments__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: avenirDemi;
-}
-@media (min-width: 768px) {
-  .comments__title {
-    font-size: 2.3rem;
-    line-height: 2.8rem;
-    font-family: avenirDemi;
-    padding-top: 3rem;
-  }
-}
-.comments__form-container {
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px solid #e1e1e1;
-}
-@media (min-width: 768px) {
-  .comments__form-container {
-    margin: 0 2rem;
-  }
-}
-@media (min-width: 1280px) {
-  .comments__form-container {
-    margin-left: 25%;
-    width: 53%;
-  }
-}
-.comments__form {
+/* Comment Form */
+.form {
   display: flex;
   flex-direction: column;
   width: 82%;
   margin-left: 1rem;
 }
-.comments__form-avatar {
+.form__section {
+  padding: 0 5%;
+  padding-bottom: 1rem;
+}
+@media (min-width: 1280px) {
+  .form__section {
+    padding: 0 10%;
+  }
+}
+.form__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .form__title {
+    font-size: 2.3rem;
+    line-height: 2.8rem;
+    font-weight: 600;
+    padding-top: 3rem;
+  }
+}
+.form__container {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .form__container {
+    margin: 0 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .form__container {
+    margin-left: 25%;
+    width: 53%;
+  }
+}
+.form__avatar {
   height: 2.3rem;
   width: 2.3rem;
   background-image: url("../assets/images/Mohan-muruge.jpg");
@@ -531,12 +483,19 @@ body {
   margin-top: 1.6rem;
 }
 @media (min-width: 768px) {
-  .comments__form-avatar {
+  .form__avatar {
     height: 3rem;
     width: 3rem;
   }
 }
-.comments__form-input {
+.form__label {
+  color: #afafaf;
+  font-size: 0.6rem;
+  line-height: 1.3rem;
+  font-weight: 600;
+  padding: 0.3rem;
+}
+.form__input {
   height: 2.3rem;
   width: 100%;
   border-radius: 0.3rem;
@@ -545,84 +504,130 @@ body {
   background-color: #fafafa;
 }
 @media (min-width: 768px) {
-  .comments__form-input {
+  .form__input {
     height: 3rem;
     padding: 1rem;
   }
 }
-.comments__form-textarea {
+.form__comment {
   height: 8rem;
   background-color: #fafafa;
 }
 @media (min-width: 768px) {
-  .comments__btn-container {
+  .form__btn-container {
     display: flex;
     align-self: flex-end;
     width: 32%;
   }
 }
 
+/* Comments Section */
+.comments__section {
+  padding: 0 5%;
+  padding-bottom: 1rem;
+}
 @media (min-width: 1280px) {
-  .comment {
-    margin-left: 25%;
-    width: 56%;
-    padding-bottom: 2.5rem;
+  .comments__section {
+    padding: 0 10%;
   }
 }
-.comment__container {
+.comments__container {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #e1e1e1;
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
-  .comment__container {
+  .comments__container {
     margin: 0 2rem;
   }
 }
-.comment__container-info {
+@media (min-width: 1280px) {
+  .comments__container {
+    margin-left: 25%;
+    width: 56%;
+    padding-bottom: 2.5rem;
+  }
+}
+.comments__container-info {
   width: 85%;
   margin-left: 1rem;
 }
-.comment__box {
+.comments__box {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.comment__date {
+.comments__name {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .comments__name {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+  }
+}
+.comments__name--bold {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .comments__name--bold {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-weight: 700;
+  }
+}
+.comments__date {
   color: #afafaf;
   font-size: 0.8rem;
   line-height: 1.3rem;
-  font-family: avenirRegular;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
-  .comment__date {
+  .comments__date {
     font-size: 0.9rem;
     line-height: 1.4rem;
-    font-family: avenirRegular;
+    font-weight: 400;
   }
 }
-.comment__avatar {
+.comments__avatar {
   background-color: #e1e1e1;
+  height: 2.3rem;
+  width: 2.3rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
 }
-.comment__content {
+@media (min-width: 768px) {
+  .comments__avatar {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+.comments__content {
   font-size: 0.8rem;
   line-height: 1.3rem;
-  font-family: avenirRegular;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
-  .comment__content {
+  .comments__content {
     font-size: 0.9rem;
     line-height: 1.4rem;
-    font-family: avenirRegular;
+    font-weight: 400;
   }
 }
-.comment__btn-container {
+.comments__btn-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.comment__delete-btn {
+.comments__delete-btn {
   color: #000000;
   padding: 0.3rem;
   background-color: #e1e1e1;
@@ -630,12 +635,12 @@ body {
   border: none;
   font-size: 0.6rem;
 }
-.comment__like-container {
+.comments__like-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.comment__like-btn {
+.comments__like-btn {
   background: url("../assets/icons/heart1.jpg") no-repeat;
   background-size: cover, contain;
   cursor: pointer;
@@ -644,6 +649,6 @@ body {
   border: none;
   margin: 1rem 0;
 }
-.comment__counter {
+.comments__counter {
   padding: 0 1rem;
 }/*# sourceMappingURL=bio.css.map */

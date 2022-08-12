@@ -34,7 +34,7 @@ const displayShows = () => {
 		showItem.appendChild(showDateTitle);
 
 		const showDate = document.createElement("p");
-		showDate.classList.add("show__text", "subheader", "subheader--bold");
+		showDate.classList.add("show__text", "show__text-bold");
 		showDate.innerText = dateFormated(element.date);
 		showItem.appendChild(showDate);
 
@@ -45,7 +45,7 @@ const displayShows = () => {
 		showItem.appendChild(showVenueTitle);
 
 		const showVenue = document.createElement("p");
-		showVenue.classList.add("show__text", "subheader");
+		showVenue.classList.add("show__text");
 		showVenue.innerText = element.place;
 		showItem.appendChild(showVenue);
 
@@ -56,13 +56,13 @@ const displayShows = () => {
 		showItem.appendChild(locationTitle);
 
 		const location = document.createElement("p");
-		location.classList.add("show__text", "subheader");
+		location.classList.add("show__text");
 		location.innerText = element.location;
 		showItem.appendChild(location);
 
 		// Button
 		const btn = document.createElement("button");
-		btn.classList.add("show__btn", "btn");
+		btn.classList.add("show__btn");
 		btn.innerText = "BUY TICKETS";
 		showItem.appendChild(btn);
 	});

@@ -3,6 +3,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+/* Hero */
 .hero {
 	background-image: linear-gradient(
 			rgba(50, 50, 50, 0.5),
@@ -10,7 +11,8 @@
 		),
 		url("../assets/images/hero-shows.jpg");
 	background-size: cover;
-	height: 50vh;
+	background-position: center;
+	height: 55vh;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -27,17 +29,18 @@
 
 	&__text {
 		color: $white;
+		padding-top: 1rem;
 		@include tablet {
-			@include text-style(1.3rem, 2rem, avenirDemi);
+			@include text-style(1.3rem, 2rem, 600);
 			margin-top: 3rem;
 		}
 	}
 
 	&__title {
 		color: $white;
-		width: 65%;
+		width: 75%;
 		@include tablet {
-			@include text-style(3.8rem, 4.25rem, avenirDemi);
+			@include text-style(3.8rem, 4.25rem, 600);
 			width: 81%;
 			margin: 1rem 0 3rem 0;
 		}
@@ -62,6 +65,7 @@
 	}
 }
 
+/* Show Section */
 .show {
 	&__section {
 		padding: 0 5%;
@@ -80,12 +84,14 @@
 	}
 
 	&__header {
-		@include text-style(1.5rem, 2rem, avenirDemi);
+		@include text-style(1.5rem, 2rem, 600);
 
 		@include tablet {
-			@include text-style(2.3rem, 2.8rem, avenirDemi);
+			@include text-style(2.3rem, 2.8rem, 600);
+			padding-top: 1.3rem;
 		}
 	}
+
 	&__list {
 		@include desktop {
 			width: 65%;
@@ -109,8 +115,7 @@
 
 	&__label {
 		color: $silver;
-		@include text-style(0.6rem, 1.3rem, avenirDemi);
-		padding: 0.3rem;
+		@include text-style(0.6rem, 1.3rem, 600);
 		margin-bottom: 0;
 
 		@include tablet {
@@ -127,10 +132,27 @@
 
 		&--special {
 			color: $silver;
-			@include text-style(0.8rem, 1.3rem, avenirDemi);
+			@include text-style(0.8rem, 1.3rem, 600);
 			padding: 0.3rem;
 			margin-bottom: 0;
 			margin-right: 9.3rem;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		@include text-style(0.8rem, 1.3rem, 400);
+
+		@include tablet {
+			@include text-style(0.9rem, 1.4rem, 400);
+		}
+
+		&--bold {
+			@include text-style(0.8rem, 1.3rem, 700);
+
+			@include tablet {
+				@include text-style(0.9rem, 1.4rem, 700);
+			}
 		}
 	}
 

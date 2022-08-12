@@ -1,16 +1,16 @@
 /* Fonts */
 @font-face {
-  font-family: avenirRegular;
+  font-family: "Avenir Next LT Pro";
   src: url("/assets/fonts/AvenirNextLTPro-Regular.otf"), url("/assets/fonts/alternativeFiles/AvenirNextLTPro.ttf");
   font-weight: 400;
 }
 @font-face {
-  font-family: avenirDemi;
+  font-family: "Avenir Next LT Pro";
   src: url("/assets/fonts/AvenirNextLTPro-Demi.otf"), url("/assets/fonts/alternativeFiles/AvenirNextLTProDemi.ttf");
   font-weight: 600;
 }
 @font-face {
-  font-family: avenirBold;
+  font-family: "Avenir Next LT Pro";
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf"), url("/assets/fonts/alternativeFiles/AvenirNextLTProBold.ttf");
   font-weight: 700;
 }
@@ -22,6 +22,7 @@
 
 body {
   margin: 0;
+  font-family: "Avenir Next LT Pro";
 }
 
 /* Header */
@@ -104,13 +105,13 @@ body {
 .footer__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: avenirDemi;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .footer__title {
     font-size: 2.3rem;
     line-height: 2.8rem;
-    font-family: avenirDemi;
+    font-weight: 600;
   }
 }
 .footer__icons-box {
@@ -160,13 +161,13 @@ body {
   margin: 0;
   font-size: 0.8rem;
   line-height: 1.1rem;
-  font-family: avenirRegular;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .footer__text {
     font-size: 0.9rem;
     line-height: 1.2rem;
-    font-family: avenirRegular;
+    font-weight: 400;
   }
 }
 .footer__text--bold {
@@ -196,62 +197,15 @@ body {
   margin: 1rem 0;
   font-size: 1rem;
   line-height: 1.3rem;
-  font-family: avenirDemi;
+  font-weight: 600;
 }
 
-.avatar {
-  height: 2.3rem;
-  width: 2.3rem;
-  background-position: center;
-  background-size: cover;
-  border-radius: 50%;
-}
-@media (min-width: 768px) {
-  .avatar {
-    height: 3rem;
-    width: 3rem;
-  }
-}
-
-.subheader {
-  margin: 0;
-  font-size: 0.8rem;
-  line-height: 1.3rem;
-  font-family: avenirRegular;
-}
-@media (min-width: 768px) {
-  .subheader {
-    font-size: 0.9rem;
-    line-height: 1.4rem;
-    font-family: avenirRegular;
-  }
-}
-.subheader--bold {
-  font-size: 0.8rem;
-  line-height: 1.3rem;
-  font-family: avenirBold;
-}
-@media (min-width: 768px) {
-  .subheader--bold {
-    font-size: 0.9rem;
-    line-height: 1.4rem;
-    font-family: avenirBold;
-  }
-}
-
-.label {
-  color: #afafaf;
-  font-size: 0.6rem;
-  line-height: 1.3rem;
-  font-family: avenirDemi;
-  padding: 0.3rem;
-  margin-bottom: 0;
-}
-
+/* Hero */
 .hero {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-shows.jpg");
   background-size: cover;
-  height: 50vh;
+  background-position: center;
+  height: 55vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -270,24 +224,25 @@ body {
 }
 .hero__text {
   color: #ffffff;
+  padding-top: 1rem;
 }
 @media (min-width: 768px) {
   .hero__text {
     font-size: 1.3rem;
     line-height: 2rem;
-    font-family: avenirDemi;
+    font-weight: 600;
     margin-top: 3rem;
   }
 }
 .hero__title {
   color: #ffffff;
-  width: 65%;
+  width: 75%;
 }
 @media (min-width: 768px) {
   .hero__title {
     font-size: 3.8rem;
     line-height: 4.25rem;
-    font-family: avenirDemi;
+    font-weight: 600;
     width: 81%;
     margin: 1rem 0 3rem 0;
   }
@@ -310,6 +265,7 @@ body {
   }
 }
 
+/* Show Section */
 .show__section {
   padding: 0 5%;
   margin-bottom: 1rem;
@@ -328,13 +284,14 @@ body {
 .show__header {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: avenirDemi;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .show__header {
     font-size: 2.3rem;
     line-height: 2.8rem;
-    font-family: avenirDemi;
+    font-weight: 600;
+    padding-top: 1.3rem;
   }
 }
 @media (min-width: 1280px) {
@@ -360,8 +317,7 @@ body {
   color: #afafaf;
   font-size: 0.6rem;
   line-height: 1.3rem;
-  font-family: avenirDemi;
-  padding: 0.3rem;
+  font-weight: 600;
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
@@ -381,10 +337,35 @@ body {
   color: #afafaf;
   font-size: 0.8rem;
   line-height: 1.3rem;
-  font-family: avenirDemi;
+  font-weight: 600;
   padding: 0.3rem;
   margin-bottom: 0;
   margin-right: 9.3rem;
+}
+.show__text {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .show__text {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+  }
+}
+.show__text--bold {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .show__text--bold {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-weight: 700;
+  }
 }
 @media (min-width: 768px) {
   .show__btn {

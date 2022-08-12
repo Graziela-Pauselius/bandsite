@@ -10,10 +10,10 @@
 
 body {
 	margin: 0;
+	font-family: "Avenir Next LT Pro";
 }
 
 /* Header */
-
 .header {
 	background-color: $main-brand;
 	width: 100%;
@@ -74,7 +74,6 @@ body {
 }
 
 /* Footer */
-
 .footer {
 	background-color: $main-brand;
 	color: $white;
@@ -93,10 +92,10 @@ body {
 	}
 
 	&__title {
-		@include text-style(1.5rem, 2rem, avenirDemi);
+		@include text-style(1.5rem, 2rem, 600);
 
 		@include tablet {
-			@include text-style(2.3rem, 2.8rem, avenirDemi);
+			@include text-style(2.3rem, 2.8rem, 600);
 		}
 	}
 
@@ -143,10 +142,10 @@ body {
 
 	&__text {
 		margin: 0;
-		@include text-style(0.8rem, 1.1rem, avenirRegular);
+		@include text-style(0.8rem, 1.1rem, 400);
 
 		@include tablet {
-			@include text-style(0.9rem, 1.2rem, avenirRegular);
+			@include text-style(0.9rem, 1.2rem, 400);
 		}
 
 		&--bold {
@@ -179,42 +178,5 @@ body {
 	padding: 0.5rem;
 	margin: 1rem 0;
 
-	@include text-style(1rem, 1.3rem, avenirDemi);
-}
-
-.avatar {
-	height: 2.3rem;
-	width: 2.3rem;
-	background-position: center;
-	background-size: cover;
-	border-radius: 50%;
-
-	@include tablet {
-		height: 3rem;
-		width: 3rem;
-	}
-}
-
-.subheader {
-	margin: 0;
-	@include text-style(0.8rem, 1.3rem, avenirRegular);
-
-	@include tablet {
-		@include text-style(0.9rem, 1.4rem, avenirRegular);
-	}
-
-	&--bold {
-		@include text-style(0.8rem, 1.3rem, avenirBold);
-
-		@include tablet {
-			@include text-style(0.9rem, 1.4rem, avenirBold);
-		}
-	}
-}
-
-.label {
-	color: $silver;
-	@include text-style(0.6rem, 1.3rem, avenirDemi);
-	padding: 0.3rem;
-	margin-bottom: 0;
+	@include text-style(1rem, 1.3rem, 600);
 }
