@@ -1,17 +1,17 @@
 /* Fonts */
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url("/assets/fonts/AvenirNextLTPro-Regular.otf"), url("/assets/fonts/alternativeFiles/AvenirNextLTPro.ttf");
+  src: url("/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("/assets/fonts/AvenirNextLTPro-Regular.woff") format("woff"), url("/assets/fonts/AvenirNextLTPro-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url("/assets/fonts/AvenirNextLTPro-Demi.otf"), url("/assets/fonts/alternativeFiles/AvenirNextLTProDemi.ttf");
+  src: url("/assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("/assets/fonts/AvenirNextLTPro-Demi.woff") format("woff"), url("/assets/fonts/AvenirNextLTPro-Demi.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url("/assets/fonts/AvenirNextLTPro-Bold.otf"), url("/assets/fonts/alternativeFiles/AvenirNextLTProBold.ttf");
+  src: url("/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("/assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"), url("/assets/fonts/AvenirNextLTPro-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 *,
@@ -187,19 +187,6 @@ body {
   padding: 1rem 0;
 }
 
-/* Button */
-.btn {
-  width: 100%;
-  background-color: #323232;
-  color: #ffffff;
-  border-radius: 0.3rem;
-  padding: 0.5rem;
-  margin: 1rem 0;
-  font-size: 1rem;
-  line-height: 1.3rem;
-  font-weight: 600;
-}
-
 /* Hero */
 .hero {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-shows.jpg");
@@ -341,6 +328,12 @@ body {
   padding: 0.3rem;
   margin-bottom: 0;
   margin-right: 9.3rem;
+  width: 4%;
+}
+@media (min-width: 1280px) {
+  .show__label--special {
+    width: 6%;
+  }
 }
 .show__text {
   margin: 0;
@@ -366,6 +359,22 @@ body {
     line-height: 1.4rem;
     font-weight: 700;
   }
+}
+@media (min-width: 768px) {
+  .show__text {
+    width: 25%;
+  }
+}
+.show__btn {
+  width: 100%;
+  background-color: #323232;
+  color: #ffffff;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .show__btn {

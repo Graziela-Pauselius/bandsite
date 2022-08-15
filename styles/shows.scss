@@ -136,6 +136,11 @@
 			padding: 0.3rem;
 			margin-bottom: 0;
 			margin-right: 9.3rem;
+			width: 4%;
+
+			@include desktop {
+				width: 6%;
+			}
 		}
 	}
 
@@ -154,9 +159,21 @@
 				@include text-style(0.9rem, 1.4rem, 700);
 			}
 		}
+
+		@include tablet {
+			width: 25%;
+		}
 	}
 
 	&__btn {
+		width: 100%;
+		background-color: $main-brand;
+		color: $white;
+		border-radius: 0.3rem;
+		padding: 0.5rem;
+		margin: 1rem 0;
+		@include text-style(1rem, 1.3rem, 600);
+
 		@include tablet {
 			width: 22%;
 		}

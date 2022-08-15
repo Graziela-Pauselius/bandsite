@@ -248,6 +248,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		margin-top: 1.6rem;
+		border-radius: 50%;
 
 		@include tablet {
 			height: 3rem;
@@ -286,6 +287,17 @@
 			align-self: flex-end;
 			width: 32%;
 		}
+	}
+
+	&__btn {
+		width: 100%;
+		background-color: $main-brand;
+		color: $white;
+		border-radius: 0.3rem;
+		padding: 0.5rem;
+		margin: 1rem 0;
+
+		@include text-style(1rem, 1.3rem, 600);
 	}
 }
 

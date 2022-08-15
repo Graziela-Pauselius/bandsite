@@ -25,6 +25,7 @@ const dateFormated = (timestamp) => {
 const apiUrl =
 	"https://project-1-api.herokuapp.com/comments?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651";
 
+// GET API
 const getAPI = () => {
 	axios.get(apiUrl).then((response) => {
 		comments = response.data;
@@ -37,6 +38,7 @@ const getAPI = () => {
 
 getAPI();
 
+// POST API
 const postAPI = (obj) => {
 	axios.post(apiUrl, obj).then((response) => {
 		commentsSection.innerHTML = null;
@@ -45,6 +47,7 @@ const postAPI = (obj) => {
 	});
 };
 
+// LIKE BTN API
 const likeAPI = (comment) => {
 	axios
 		.put(
@@ -56,6 +59,7 @@ const likeAPI = (comment) => {
 		});
 };
 
+// DELETE API
 const deleteAPI = (comment) => {
 	axios
 		.delete(
@@ -118,7 +122,8 @@ const displayComment = (comment) => {
 	deletebtn.innerText = "Delete";
 	btnContainer.appendChild(deletebtn);
 
-	deletebtn.addEventListener("click", () => {
+	deletebtn.addEventListener("click", (e) => {
+		e.preventDefault();
 		deleteAPI(comment.id);
 	});
 
@@ -132,7 +137,8 @@ const displayComment = (comment) => {
 	likeBtn.classList.add("comments__like-btn");
 	likeContainer.appendChild(likeBtn);
 
-	likeBtn.addEventListener("click", () => {
+	likeBtn.addEventListener("click", (e) => {
+		e.preventDefault();
 		likeAPI(comment.id);
 	});
 

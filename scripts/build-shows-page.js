@@ -19,7 +19,21 @@ const dateFormated = (timestamp) => {
 	return formatedDate;
 };
 
-// ----- Display Shows Function ------
+// ------ Axios Function -----------
+
+const apiUrl =
+	"https://project-1-api.herokuapp.com/showdates?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651";
+
+const getAPI = () => {
+	axios.get(apiUrl).then((response) => {
+		showDates = response.data;
+		displayShows();
+	});
+};
+
+getAPI();
+
+// ----- Display  Shows Function ------
 const displayShows = () => {
 	showDates.forEach((element) => {
 		// Show Item Container
@@ -34,7 +48,7 @@ const displayShows = () => {
 		showItem.appendChild(showDateTitle);
 
 		const showDate = document.createElement("p");
-		showDate.classList.add("show__text", "show__text-bold");
+		showDate.classList.add("show__text", "show__text--bold");
 		showDate.innerText = dateFormated(element.date);
 		showItem.appendChild(showDate);
 
@@ -67,15 +81,6 @@ const displayShows = () => {
 		showItem.appendChild(btn);
 	});
 };
-
-axios
-	.get(
-		"https://project-1-api.herokuapp.com/showdates?api_key=8c9ea60a-2ec5-4b26-8772-3263e3da7651"
-	)
-	.then((response) => {
-		showDates = response.data;
-		displayShows();
-	});
 
 // Selected Event Handler
 const showBox = document.querySelectorAll(".show__box");

@@ -167,16 +167,3 @@ body {
 		padding: 1rem 0;
 	}
 }
-
-/* Button */
-
-.btn {
-	width: 100%;
-	background-color: $main-brand;
-	color: $white;
-	border-radius: 0.3rem;
-	padding: 0.5rem;
-	margin: 1rem 0;
-
-	@include text-style(1rem, 1.3rem, 600);
-}
